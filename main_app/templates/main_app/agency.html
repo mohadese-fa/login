@@ -1,0 +1,65 @@
+{%extends 'main_app/layout.html'%}
+{%load static%}
+{%block 'titleA'%}
+نمایندگی ها
+{%endblock%}
+{%block 'titleB'%}
+نمایندگی ها
+{%endblock%}
+{%block 'content'%}
+<div class="page-content mt-mb-6 pb-8 appear-animate">
+    <div class="container">
+        <div class="toolbox">
+            <div class="toolbox-left ">
+                <div class="toolbox-item toolbox-sort select-box text-dark">        
+                    <label for="linkSelect" class="d-block">مرتب شود بر اساس:</label> 
+                    <select id="linkSelect" onchange="navigateToLink()" name="orderby" class="form-control" style="width: 250px; height: 46px;text-align: center;">
+                        <option value="">--انتخاب  کنید--</option>
+                        <option value="/agency/">همه</option>
+                        {%for i in c%}
+                        <option value="/agencyCity/{{i.id}}">{{i.name}}</option>
+                        {%endfor%}
+                    </select>
+                    &nbsp; &nbsp; &nbsp;
+                </div>
+            </div>
+        </div>
+
+        <section class="store-section pb-8 appear-animate">
+            <div class="container">
+                <h2 class="title title-center mb-7 text-normal">نمایندگی های ما</h2>
+                <div class="row cols-sm-2 cols-lg-4">
+                    {%for i in ag%}
+                    <div class="store mb-7">
+                        <figure class="banner-radius">
+                            <img src="{{i.photo.url}}" alt="store" width="280" height="280">
+                            <h4 class="overlay-visible" style="margin: 0 1rem; align-items: center;border-radius: 1rem;">{{i.title}}</h4>
+                            <div class="overlay overlay-transparent" style="align-items: center;">
+                                <a class="mt-8" href="mail:#">{{i.city}}</a>
+                                <a href="tel:#">{{i.phone}} </a>
+                                <a href="tel:#">{{i.telephone}}</a>
+                                <div class="social-links mt-1">
+                                    <a href="#" class="social-link social-facebook fab fa-facebook-f"></a>
+                                    <a href="#" class="social-link social-twitter fab fa-twitter"></a>
+                                    <a href="#" class="social-link social-linkedin fab fa-linkedin-in"></a>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+                    {%endfor%}
+                </div>
+            </div>
+        </section>
+    </div>    
+    <!-- End Store Section -->
+</div>
+<script>
+    function navigateToLink(){
+        var select=document.getElementById("linkSelect");
+        var url=select.value;
+        if (url){
+            window.location.href = url;
+        }
+    } 
+</script>
+{%endblock%}

@@ -1,0 +1,110 @@
+{%extends 'main_app/layout.html'%}
+{%load static%}
+{%block 'titleA'%}
+دسته بندی محصــولات
+{%endblock%}
+{%block 'titleB'%}
+دسته بندی محصــولات
+{%endblock%}
+{%block 'content'%}
+<main class="main home mt-lg-1 mt-mb-10 pb-7 rtl text-right">
+    <div class="page-content">
+        {%for i in pt%}
+        <div class="container pb-mb-10">
+            <section class="product-wrapper pt-1 appear-animate">
+                <h2 class="title title-underline with-link">
+                    <span>{{i.name}}</span><a href="/products/{{i.id}}"
+                                              class="btn btn-link text-capitalize font-weight-semi-bold btn-more  mt-2 mt-md-0">نمایش همه محصولات<i class="d-icon-arrow-left"></i></a>
+                </h2>
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                        <div class="banner banner3 banner-fixed overlay-effect4 h-100">
+                            <figure class="h-100">
+                                <img src="{{i.photo.url}}" class="h-100" alt="banner"
+                                     width="220" height="343" style="background-color: rgb(37, 36, 42);" />
+                            </figure>
+                            <div class="banner-content pr-2 appear-animate" data-animation-options="{
+                                'delay': '.3s'
+                            }">
+                                <h4 class="banner-subtitle text-uppercase text-primary ls-m mb-2">
+                                     {{i.text | safe}}
+                                </h4>
+                                <a href="demo11-shop.html"
+                                   class="btn btn-outline btn-white btn-md btn-icon-right ">
+                                    مشاهده و انتخاب <i class="d-icon-arrow-left"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-8  col-sm-6 mb-4">
+                        <div class="owl-carousel owl-theme row owl-nav-full cols-xl-4 cols-md-3 cols-2"
+                             data-owl-options="{
+                             'rtl':true,
+                            'items': 5,
+                            'nav': false,
+                            'dots': false,
+                            'margin': 20,
+                            'loop': false,
+                            'responsive': {
+                                '0': {
+                                    'items': 2
+                                },
+                                '576': {
+                                    'items': 1
+                                },
+                                '768': {
+                                    'items': 2
+                                },
+                                '1200': {
+                                    'items': 4,
+                                    'nav': true
+                                }
+                            }
+                        }">
+                            {%for itm in i.categories.all%}
+                            <div class="product product-classic">
+                                <figure class="product-media">
+                                    <a href="demo11-product.html">
+                                        <img src="{{itm.photo.url}}" alt="product" width="300"
+                                             height="338">
+                                    </a>
+                                </figure>
+                                <div class="product-details rtl">
+                                    <h3 class="product-name">
+                                        <a href="demo11-product.html">{{itm.product}}</a>
+                                    </h3>
+                                    <div class="product-price">
+                                        <span class="price">{{itm.price}}</span>
+                                    </div>
+                                    <div class="ratings-container">
+                                        <div class="ratings-full">
+                                            <span class="ratings" style="width:100%"></span>
+                                            <span class="tooltiptext tooltip-top"></span>
+                                        </div>
+                                        <a href="demo11-product.html" class="rating-reviews">( از 16نظر )</a>
+                                    </div>
+                                    <div class="product-action">
+                                        <a href="#" class="btn-product btn-cart" data-toggle="modal"
+                                           data-target="#addCartModal" title="اضافه به خرید">
+                                            <i class="d-icon-bag"></i><span>
+                                                مشاهده و انتخاب
+                                            </span>
+                                        </a>
+                                        <a href="#" class="btn-product-icon btn-wishlist"
+                                           title="اضافه به علاقه مندی"><i class="d-icon-heart"></i></a>
+                                        <a href="#" class="btn-product-icon btn-quickview" title="نمایش ">
+                                            <i class="d-icon-search"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>  
+                            {%endfor%}
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        {%endfor%}
+    </div>   
+</main>        
+{%endblock%}

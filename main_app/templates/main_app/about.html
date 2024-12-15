@@ -1,0 +1,38 @@
+{%extends 'main_app/layout.html'%}
+{%load static%}
+{%block 'titleA'%}
+درباره ما
+{%endblock%}
+{%block 'titleB'%}
+درباره ما
+{%endblock%}
+{%block 'content'%}
+<section class="banner-section pb-8">
+    <div class="container">
+        <div class="row"> 
+            <div class="col-md-6 appear-animate"
+                data-animation-options="{'name': 'fadeInRightShorter', 'delay': '.3s'}">
+                <div class="banner h-100">
+                    <div class="banner-content pr-lg-4 y-50"> 
+                        <h3 class="title text-black text-uppercase">{{cnt.0.title }}    
+                        </h3>
+                        <h6 class="text-black mb-6" style="line-height: 1.8; font-size: 1.5rem;"> 
+                            {{cnt.0.text | safe}} 
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 appear-animate"
+                data-animation-options="{'name': 'fadeInLeftShorter', 'delay': '.5s'}">
+                <div class="card-description overlay-zoom">
+                    <figure class="p-relative">
+                        <img src="{%static 'main_app/'%}images/index/about.png" width="600" height="450"
+                            alt="Product" class="w-100 d-block">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 
+<div class="mb-10"></div>
+{%endblock%}

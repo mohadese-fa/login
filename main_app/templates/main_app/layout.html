@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    {%load static%}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>pamir shop</title>
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description" content="Riode - Ultimate eCommerce Template">
+    <meta name="author" content="D-THEMES">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{%static 'main_app/'%}images/icons/favicon.png">
+    <link rel="preload" href="{%static 'main_app/'%}fonts/riode.ttf?5gap68" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="{%static 'main_app/'%}vendor/fontawesome-free/webfonts/fa-solid-900.woff2" as="font" type="font/woff2"
+      crossorigin="anonymous">
+    <link rel="preload" href="{%static 'main_app/'%}vendor/fontawesome-free/webfonts/fa-brands-400.woff2" as="font" type="font/woff2"
+      crossorigin="anonymous">
+    <script>
+        WebFontConfig = {
+            google: { families: ['vazir:300,400,500,600,700,800', 'vazir:400,600,700'] }
+        };
+        (function (d) {
+            var wf = d.createElement('script'), s = d.scripts[0];
+            wf.src = 'js/webfont.js';
+            wf.async = true;
+            s.parentNode.insertBefore(wf, s);
+        })(document);
+    </script>
+    <link rel="stylesheet" type="text/css" href="{%static 'main_app/'%}vendor/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{%static 'main_app/'%}vendor/animate/animate.min.css">
+    <!-- Plugins CSS File -->
+    <link rel="stylesheet" type="text/css" href="{%static 'main_app/'%}vendor/photoswipe/photoswipe.min.css">
+    <link rel="stylesheet" type="text/css" href="{%static 'main_app/'%}vendor/photoswipe/default-skin/default-skin.min.css">
+    <link rel="stylesheet" type="text/css" href="{%static 'main_app/'%}vendor/magnific-popup/magnific-popup.min.css">
+    <link rel="stylesheet" type="text/css" href="{%static 'main_app/'%}vendor/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="{%static 'main_app/'%}vendor/sticky-icon/stickyicon.css">
+    <!-- Font Vazir -->
+    <link href="{%static 'main_app/'%}fonts/vazir/font-vazir.css" rel="stylesheet" />
+    <!-- Main CSS File -->
+    <link rel="stylesheet" type="text/css" href="{%static 'main_app/'%}css/market3.min.css">
+    
+</head>
+<body class="market3-product">
+    <div class="page-wrapper">
+        <h1 class="d-none"> فروشگاه لوازم کوهنوردی پامیر </h1>
+        <header class="header rtl text-right">
+            <div class="header-middle sticky-header fix-top sticky-content">
+                <div class="container-fluid">
+                    <div class="header-right">
+                        <a href="#" class="mobile-menu-toggle">
+                            <i class="d-icon-bars2"></i>
+                        </a>
+                        <a href="market3.html" class="logo">
+                            <img src="{%static 'main_app/'%}images/index/logo.png" alt="logo" width="153" height="43" />
+                        </a>
+                        <!-- End Logo -->
+                        <nav class="main-nav">
+                            <ul class="menu">
+                                <li>
+                                    <a href="/">صفحه نخست</a>
+                                </li>                              
+                                <li class="menu">
+                                    <a href="/product_category">محصولات</a>
+                                    <ul>                                      
+                                        <li>
+                                            <a href="#"> کفش کوهنوردی </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"> کتانی سنگنوردی </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"> لوازم تخصصی </a>
+                                        </li>
+                                    </ul>
+                                </li>                               
+                                <li>
+                                    <a href="/agency">نمایندگی ها</a>                                   
+                                </li>
+                                <li>
+                                    <a href="/about">درباره ما</a>
+                                </li>
+                                <li>
+                                    <a href="/question">سوالات متداول</a>
+                                </li>
+                                <li>
+                                    <a href="/contact_us">تماس با ما</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header-center">
+                    </div>
+                    <div class="header-left">
+                       
+                        <!-- End Dropdown Menu -->
+                      
+                        <!-- End Dropdown Menu -->
+                        <div class="header-phone ml-2 ml-sm-6" title="tel">
+                            <a href="tel:#" class="header-phone ml-2 ml-sm-6" title="tel">
+                                <i class="d-icon-phone  ml-0 ml-lg-1"></i>
+                                <span class="d-lg-show">  09126141135  </span>
+                            </a>
+                        </div>    
+                        <div class="header-phone ml-2 ml-sm-6" title="tel">
+                            <a href="tel:#" class="header-location ml-2 ml-sm-6" title="loc">
+                                <i class="d-icon-map-marker  ml-0 ml-lg-1"></i>
+                                <span class="d-lg-show">  خیابان کارگر شمالی،خیابان نصرت غربی،شماره 88،طبقه 2  </span>
+                            </a>
+                        </div>    
+                        <!-- End Divider -->
+                        <div class="header-search hs-toggle ml-4">
+                            <a href="#" class="search-toggle" title="search-toggle">
+                                <i class="d-icon-search"></i>
+                            </a>
+                            <form action="#" class="input-wrapper">
+                                <input type="text" class="form-control text-left" name="search" autocomplete="off"
+                                       placeholder="کلمه کلیدی را وارد کنید" required />
+                                <button class="btn btn-search" type="submit" title="submit-button">
+                                    <i class="d-icon-search"></i>
+                                </button>
+                                
+                            </form>
+                        </div>
+                        <!-- End Header Search -->
+                        <a href="{%static 'main_app/'%}ajax/login.html" class="login-link hs-toggle ml-4" title="login">
+                            <i class="d-icon-user"></i>
+                        </a>
+                        <div class="dropdown wishlist wishlist-dropdown off-canvas ml-4 d-lg-show">
+                            <a href="wishlist.html" class="wishlist-toggle">
+                                <i class="d-icon-heart"></i>
+                            </a>
+                            <div class="canvas-overlay"></div>
+                            <!-- End Wishlist Toggle -->
+                            <div class="dropdown-box scrollable">
+                                <div class="canvas-header">
+                                    <h4 class="canvas-title">علاقه مندی</h4>
+                                    <a href="#" class="btn btn-dark btn-link btn-icon-right btn-close">بستن<i
+                                            class="d-icon-arrow-left"></i><span class="sr-only">علاقه مندی</span></a>
+                                </div>
+                                <div class="products scrollable">
+                                    <div class="product product-wishlist">
+                                        <figure class="product-media">
+                                            <a href="product.html">
+                                                <img src="{%static 'main_app/'%}images/wishlist/product-1.jpg" width="100" height="100"
+                                                    alt="product" />
+                                            </a>
+                                            <button class="btn btn-link btn-close">
+                                                <i class="fas fa-times"></i><span class="sr-only">بستن</span>
+                                            </button>
+                                        </figure>
+                                        <div class="product-detail">
+                                            <a href="product.html" class="product-name">کیف مشکی دخترانه</a>
+                                            <div class="price-box">
+                                                <span class="product-price"> 800,000 تومان </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of wishlist Product -->
+                                    <div class="product product-wishlist">
+                                        <figure class="product-media">
+                                            <a href="product.html">
+                                                <img src="{%static 'main_app/'%}images/wishlist/product-2.jpg" width="100" height="100"
+                                                    alt="product" />
+                                            </a>
+                                            <button class="btn btn-link btn-close">
+                                                <i class="fas fa-times"></i><span class="sr-only">بستن</span>
+                                            </button>
+                                        </figure>
+                                        <div class="product-detail">
+                                            <a href="product.html" class="product-name"> شال آبی رزبافت
+                                            </a>
+                                            <div class="price-box">
+                                                <span class="product-price"> 800,000 تومان </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of wishlist Product -->
+                                    <div class="product product-wishlist">
+                                        <figure class="product-media">
+                                            <a href="product.html">
+                                                <img src="{%static 'main_app/'%}images/wishlist/product-3.jpg" width="100" height="100"
+                                                    alt="product" />
+                                            </a>
+                                            <button class="btn btn-link btn-close">
+                                                <i class="fas fa-times"></i><span class="sr-only">بستن</span>
+                                            </button>
+                                        </figure>
+                                        <div class="product-detail">
+                                            <a href="product.html" class="product-name">شلوار بگ</a>
+                                            <div class="price-box">
+                                                <span class="product-price"> 800,000 تومان </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of wishlist Product -->
+                                </div>
+                                <a href="wishlist.html" class="btn btn-dark wishlist-btn mt-4">
+                                    <span>نمایش لیست</span>
+                                </a>
+                                <!-- End of Products  -->
+                            </div>
+                            <!-- End Dropdown Box -->
+                        </div>
+                        <div class="dropdown cart-dropdown type2 mr-0 mr-lg-2">
+                            <a href="#" class="cart-toggle link">
+                                <i class="d-icon-bag"><span class="cart-count">2</span></i>
+                            </a>
+                            <div class="dropdown-box">
+                                <div class="products scrollable">
+                                    <div class="product product-cart">
+                                        <figure class="product-media">
+                                            <a href="demo-food3-product.html">
+                                                <img src="{%static 'main_app/'%}images/demos/demo-food3/product/1-280x220.jpg" alt="product"
+                                                    width="80" height="88" />
+                                            </a>
+                                            <button class="btn btn-link btn-close">
+                                                <i class="fas fa-times"></i><span class="sr-only">بستن</span>
+                                            </button>
+                                        </figure>
+                                        <div class="product-detail">
+                                            <a href="demo-food3-product.html" class="product-name">چیز برگر
+                                                </a>
+                                            <div class="price-box">
+                                                
+                                                <span class="product-price"> 1,200,000 تومان </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of Cart Product -->
+                                    <div class="product product-cart">
+                                        <figure class="product-media">
+                                            <a href="demo-food3-product.html">
+                                                <img src="{%static 'main_app/'%}images/demos/demo-food3/product/2-280x220.jpg" alt="product"
+                                                    width="80" height="88" />
+                                            </a>
+                                            <button class="btn btn-link btn-close">
+                                                <i class="fas fa-times"></i><span class="sr-only">بستن</span>
+                                            </button>
+                                        </figure>
+                                        <div class="product-detail">
+                                            <a href="demo-food3-product.html" class="product-name">سبزیجات تازه
+                                               </a>
+                                            <div class="price-box">
+                                                
+                                                <span class="product-price"> 1،400،000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of Cart Product -->
+                                </div>
+                                <!-- End of Products  -->
+                                <div class="cart-total">
+                                    <label>جمع قبل از تخفیف:</label>
+                                    <span class="price">2,600,000 تومان</span>
+                                </div>
+                                <!-- End of Cart Total -->
+                                <div class="cart-action">
+                                    <a href="cart.html" class="btn btn-dark btn-link">نمایش خرید </a>
+                                    <a href="checkout.html" class="btn btn-dark"><span>پرداخت</span></a>
+                                </div>
+                                <!-- End of Cart Action -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- End Header -->
+        <main class="main">
+            <!-- End intro section -->
+            <section class=" rtl text-right">
+                <div class="row gutter-no ">
+                    <div class="col-lg-12 ">
+                        <div class="page-content">
+                        <!-- self-main -->
+                        <section class="banner-section pt-md-6">
+                            <div class="container">
+                                <div class="row">
+                                    <section class="product-wrapper mt-10 pt-1 appear-animate">
+                                        <h2 class="title title-underline with-link">
+                                            <span>
+                                                {%block 'titleA'%}
+                                                   {%endblock%}
+                                            </span>
+                                        <div class="product-navigation">
+                                            <ul class="breadcrumb breadcrumb-lg">
+                                                <li><a href="/"><i class="d-icon-home"></i></a></li>
+                                                <li><a href="#" class="active"> 
+                                                {%block 'titleB'%}
+                                                    {%endblock%}
+                                                  </a></li>
+                                            </ul>
+                                        </div>
+                                        </h2>
+                                    </section> 
+                                </div>
+                            </div>
+                        </section>
+                        <div>
+                                    {%block 'content'%}
+                                    {%endblock%}
+
+                         </div>
+                         <!-- end of self-main --> 
+                         </div>
+                         <div class="mb-10"></div>
+                         <section class="instagram-section pb-10 appear-animate" data-animation-options="{
+                            'delay': '.3s'
+                        }">
+                            <div class="container pb-8">
+                                <h2 class="title title-simple mb-5">برندهای ما</h2> 
+                            <div class="appear-animate" data-animation-options="{
+                                'delay': '.3s'
+                                 }" style="background-color: #ffffff;">
+                                <div class="container">
+                                    <div class="owl-carousel owl-theme row brand-carousel cols-xl-6 cols-lg-5 cols-md-4 cols-sm-3 cols-2 gutter-no"
+                                     data-owl-options="{
+                                     'rtl':true,
+                                'items': 7,
+                                'nav': false,
+                                'dots': false,
+                                'autoplay': true,
+                                'margin': 30,
+                                'loop': true,
+                                'responsive': {
+                                    '0': {
+                                        'items': 2
+                                    },
+                                    '576': {
+                                        'items': 3
+                                    },
+                                    '768': {
+                                        'items': 4
+                                    },
+                                    '992': {
+                                        'items': 5
+                                    },
+                                    '1200': {
+                                        'items': 6
+                                    }
+                                }
+                            }">
+                                    <img src="{%static 'main_app/'%}images/index/1.jpg" alt="brand" width="180" height="100" />
+                                    <img src="{%static 'main_app/'%}images/index/2.jpg" alt="brand" width="180" height="100" />
+                                    <img src="{%static 'main_app/'%}images/index/3.jpg" alt="brand" width="180" height="100" />
+                                    <img src="{%static 'main_app/'%}images/index/4.jpg" alt="brand" width="180" height="100" />
+                                    
+                                    </div>
+                                </div>
+                            </div> 
+                            </div>
+                        </section> 
+                         <!-- End brand- -->
+ 
+                        </div>
+                        <footer class="footer pl-4 pl-sm-6 pl-lg-8 pr-4 pr-sm-6 pr-lg-8" >
+                            <div class="footer-middle">
+                                <div class="row gutter-lg">
+                                    <div class="col-lg-9">
+                                        <div class="widget widget-newsletter">
+                                            <div class="newsletter-info">
+                                                <h3 class="widget-title">عضویت در سایت </h3>
+                                                <p><br/> همین حالا در سایت ثبت نام کنید و از خدمات ویژه مشتریان بهره مند شوید .</p>
+                                            </div>
+                                            <form action="#"
+                                                  class="input-wrapper input-wrapper-inline input-wrapper-round">
+                                                <input type="email" class="form-control text-left" name="email" id="email"
+                                                       placeholder="ایمیل آدرس را اینجا وارد کنید..." required />
+                                                <button class="btn btn-primary" type="submit">عضویت</button>
+                                            </form>
+                                        </div>
+                                        <!-- End Newsletter -->
+                                        <div class="row ">
+                                            <div class="col-lg-3 order-lg-first">
+                                                <div class="widget widget-contact">
+                                                    <h4 class="widget-title">پیوندهای مفید</h4>
+                                                    <ul class="widget-body ">
+                                                        <li>
+                                                            <a href="#"> صفحه نخست </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"> محصــولات </a>
+                                                        </li>   
+                                                        <li>
+                                                            <a href="about-us.html">حساب کاربری من</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="contact-us.html">تماس با ما</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">درباره ما </a>
+                                                        </li>                                                                                                                                                        
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 order-lg-first">
+                                                <div class="widget widget-contact">
+                                                    <h4 class="widget-title"> خدمات مشتری </h4>
+                                                    <ul class="widget-body ">
+                                                        <li>
+                                                            <a href="#"> سبد خرید </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"> تاریخچه سفارشات </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"> پیگیری سفارشات </a>
+                                                        </li>                                                       
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 order-lg-first">
+                                                <div class="widget widget-contact">
+                                                    <h4 class="widget-title"> ما را در شبکه های اجتماعی دنبال کنید </h4>
+                                                    <ul class="widget-body ">
+                                                        <li>
+                                                            <a href="#" title="social-link" class="social-link social-facebook fab fa-facebook-f"></a>
+                                                            <a href="#" title="social-link" class="social-link social-twitter fab fa-twitter"></a>
+                                                            <a href="#" title="social-link" class="social-link social-instagram fab fa-instagram"></a>
+                                                            <a href="#" title="social-link" class="social-link social-linkedin fab fa-linkedin-in"></a>
+                                                        </li>
+                                                        <li>
+                                                            
+                                                        </li>
+                                                        <li>
+                                                            
+                                                        </li>                                                       
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 order-lg-first">
+                                        <div class="widget widget-contact">
+                                            <h4 class="widget-title">اطلاعات تماس</h4>
+                                            <ul class="widget-body ">
+                                                <li>
+                                                    <label>آدرس :</label>
+                                                    <a href="#"> خیابان کارگر شمالی،خیابان نصرت غربی،شماره 88،طبقه 2     </a>
+                                                </li>
+                                                <li>
+                                                    <label>تلفن:</label>
+                                                    <a href="tel:#"> 09126141135 </a>
+                                                </li>
+                                                <li>
+                                                    <label>ایمیل:</label>
+                                                    <a href="mailto:mail@riode.com">mail@example.com</a>
+                                                </li>
+                                                <li>
+                                                    <label>روزها / ساعت کاری:</label>
+                                                    <a href="#"> دوشنبه - یکشنبه / 9:00 صبح تا 8:00 شب</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- End Widget -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End FooterMiddle -->
+                            <div class="footer-bottom d-block text-center">
+                                <p class="copyright"> &copy; 2023-2024 کلیه حقوق برای بازرگانی پامیر محفوظ است.</p>
+                            </div>
+                            <!-- End FooterBottom -->
+                        </footer>
+                        <!-- End Footer -->
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- End Main -->
+    <!-- </div> -->
+    <!-- Sticky Footer -->
+    <div class="sticky-footer sticky-content fix-bottom rtl text-right">
+        <a href="/" class="sticky-link">
+            <i class="d-icon-home"></i>
+            <span>صفحه نخست</span>
+        </a>
+        <a href="#" class="sticky-link">
+            <i class="d-icon-volume"></i>
+            <span>سبد خرید</span>
+        </a>
+        <a href="#" class="sticky-link">
+            <i class="d-icon-heart"></i>
+            <span>علاقه مندی</span>
+        </a>
+        <a href="#" class="sticky-link">
+            <i class="d-icon-user"></i>
+            <span>حساب کاربری</span>
+        </a>
+        <div class="header-search hs-toggle dir-up">
+            <a href="#" class="search-toggle sticky-link">
+                <i class="d-icon-search"></i>
+                <span>جستجو</span>
+            </a>
+            <form action="#" class="input-wrapper">
+                <input type="text" class="form-control" name="search" autocomplete="off"
+                    placeholder="جستجو ..." required />
+                <button class="btn btn-search" type="submit">
+                    <i class="d-icon-search"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+    <!-- Scroll Top -->
+    <a id="scroll-top" href="#top" title="Top" role="button" class="scroll-top"><i class="d-icon-arrow-up"></i></a>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <!-- Background of PhotoSwipe. It's a separate element as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+            <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <!--  Controls are self-explanatory. Order can be changed. -->
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" aria-label="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--zoom" aria-label="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="loading-spin"></div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button--arrow--left" aria-label="Previous (arrow left)"></button>
+                <button class="pswp__button--arrow--right" aria-label="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MobileMenu -->
+    <div class="mobile-menu-wrapper">
+        <div class="mobile-menu-overlay">
+        </div>
+        <!-- End of Overlay -->
+        <a class="mobile-menu-close" href="#"><i class="d-icon-times"></i></a>
+        <!-- End of CloseButton -->
+        <div class="mobile-menu-container scrollable">
+            <form action="#" class="input-wrapper">
+                <input type="text" class="form-control" name="search" autocomplete="off"
+                    placeholder="جستجو ..." required />
+                <button class="btn btn-search" type="submit">
+                    <i class="d-icon-search"></i>
+                </button>
+            </form>
+            <!-- End of Search Form -->   
+            <div class="mobile-menu mmenu-anim tab-content">
+                <div class="tab-pane active" id="tab-11">
+                    <ul>
+                        <li>
+                            <a href="/">صفحه نخست</a>
+                        </li>
+                        <li>
+                            <a href="/product_category">محصولات</a>
+                            <ul>                                      
+                                <li>
+                                    <a href="#"> کفش کوهنوردی </a>
+                                </li>
+                                <li>
+                                    <a href="#"> کتانی سنگنوردی </a>
+                                </li>
+                                <li>
+                                    <a href="#"> لوازم تخصصی </a>
+                                </li>
+                            </ul>
+                        </li>  
+                        <li>
+                            <a href="/agency">نمایندگی ها</a>                                   
+                        </li>
+                        <li>
+                            <a href="/about">درباره ما</a>
+                        </li>
+                        <li>
+                            <a href="/question">سوالات متداول</a>
+                        </li>
+                        <li>
+                            <a href="/contact_us">تماس با ما</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>       
+            <!-- End of MobileMenu -->
+        </div>
+    </div>
+    <!-- sticky icons-->
+	<!-- <div class="sticky-icons-wrapper rtl">
+		<div class="sticky-icon-links">
+			<ul>
+				<li><a href="#" class="demo-toggle"><i class="fas fa-home"></i><span>دموها</span></a></li>
+				<li><a href="documentation.html"><i class="fas fa-info-circle"></i><span>مستندات</span></a>
+				</li>
+				<li><a href="#"><i class="fas fa-star"></i><span>بازدید</span></a>
+				</li>
+				<li><a href="#"><i class="fas fa-shopping-cart"></i><span>خرید
+							!</span></a></li>
+			</ul>
+		</div>
+		<div class="demos-list">
+			<div class="demos-overlay"></div>
+			<a class="demos-close" href="#"><i class="close-icon"></i></a>
+			<div class="demos-content scrollable scrollable-light">
+				<h3 class="demos-title">دموها</h3>
+				<div class="demos">
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<!-- Plugins JS File -->
+    <script src="{%static 'main_app/'%}vendor/jquery/jquery.min.js"></script>
+    <script src="{%static 'main_app/'%}vendor/parallax/parallax.min.js"></script>
+    <script src="{%static 'main_app/'%}vendor/jquery.plugin/jquery.plugin.min.js"></script>
+    <script src="{%static 'main_app/'%}vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="{%static 'main_app/'%}vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="{%static 'main_app/'%}vendor/owl-carousel/owl.carousel.min.js"></script>
+    <script src="{%static 'main_app/'%}vendor/photoswipe/photoswipe.min.js"></script>
+    <script src="{%static 'main_app/'%}vendor/photoswipe/photoswipe-ui-default.min.js"></script>
+    <script src="{%static 'main_app/'%}vendor/elevatezoom/jquery.elevatezoom.min.js"></script>
+    <script src="{%static 'main_app/'%}vendor/sticky/sticky.min.js"></script>
+    <script src="{%static 'main_app/'%}vendor/jquery.gmap/jquery.gmap.min.js"></script>
+    <!-- Main JS File -->
+    <script src="{%static 'main_app/'%}js/main.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+    <script>
+
+        /*
+        Map Settings
+
+            Find the Latitude and Longitude of your address:
+                - https://www.latlong.net/
+                - http://www.findlatitudeandlongitude.com/find-address-from-latitude-and-longitude/
+
+        */
+
+        // Map Markers
+        var mapMarkers = [{
+            address: "New York, NY 10017",
+            html: "<strong>New York Office<\/strong><br>New York, NY 10017",
+            popup: true
+        }];
+
+        // Map Initial Location
+        var initLatitude = 40.75198;
+        var initLongitude = -73.96978;
+
+        // Map Extended Settings
+        var mapSettings = {
+            controls: {
+                draggable: !window.Riode.isMobile,
+                panControl: true,
+                zoomControl: true,
+                mapTypeControl: true,
+                scaleControl: true,
+                streetViewControl: true,
+                overviewMapControl: true
+            },
+            scrollwheel: false,
+            markers: mapMarkers,
+            latitude: initLatitude,
+            longitude: initLongitude,
+            zoom: 11
+        };
+
+        var map = $('#googlemaps').gMap(mapSettings);
+
+        // Map text-center At
+        var mapCenterAt = function (options, e) {
+            e.preventDefault();
+            $('#googlemaps').gMap("centerAt", options);
+        }
+
+    </script>
+</body>
+</html>

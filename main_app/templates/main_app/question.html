@@ -1,0 +1,144 @@
+{%extends 'main_app/layout.html'%}
+{%load static%}
+{%block 'titleA'%}
+سوالات متداول
+{%endblock%}
+{%block 'titleB'%}
+سوالات متداول
+{%endblock%}
+{%block 'content'%}
+<section class="banner-section pt-md-6 pb-8 appear-animate">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 ">
+                <h2 class="title pl-2 pr-2 ls-m text-right ">{{cnt.0.title}}</h2>
+                <div class="accordion accordion-border accordion-boxed accordion-plus">
+                    {%for i in faq%}
+                    {%if i.id == 3 %}
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="#collapse3-4" class="collapse">{{i.title}}</a>
+                        </div>
+                        <div id="collapse3-4" class="expanded">
+                            <div class="card-body">
+                                <p>{{i.description | safe}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {%else%}
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="#collapse4-3" class="expand">{{i.title}}</a>
+                        </div>
+                        <div id="collapse4-3" class="collapsed">
+                            <div class="card-body">
+                                <p> {{i.description | safe}}
+                                   </p>
+                            </div>
+                        </div>
+                    </div>
+                    {%endif%}
+                    {%endfor%}
+                </div>
+            </div>
+            <div class="col-md-6 ">
+                <h2 class="title pl-2 pr-2 ls-m">{{cnt.1.title }}</h2>
+                <div class="accordion accordion-border accordion-boxed accordion-plus">
+                    {%for i in faqB%}
+                    {%if i.id == 1 %}
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="#collapse2-1" class="collapse">{{i.title}}</a>
+                        </div>
+                        <div id="collapse2-1" class="expanded">
+                            <div class="card-body">
+                                <p> {{i.description | safe}}
+                                   </p>
+                            </div>
+                        </div>
+                    </div>
+                    {%else%}
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="#collapse2-2" class="expand">{{i.title}}</a>
+                        </div>
+                        <div id="collapse2-2" class="collapsed">
+                            <div class="card-body">
+                                <p> {{i.description | safe}}
+                                   </p>
+                            </div>
+                        </div>
+                    </div>
+                    {%endif%}
+                    {%endfor%}
+                </div>
+            </div>
+        </div>
+        <div class="row mt-10 pt-10">
+            <div class="col-md-6 ">
+                <h2 class="title pl-2 pr-2 ls-m text-right ">{{cnt.2.title}}</h2>
+                <div class="accordion accordion-border accordion-boxed accordion-plus">
+                    {%for i in faqC%}
+                    {%if i.id == 1 %}
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="#collapse3-4" class="collapse">{{i.title}}</a>
+                        </div>
+                        <div id="collapse3-4" class="expanded">
+                            <div class="card-body">
+                                <p>{{i.description | safe}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {%else%}
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="#collapse4-3" class="expand">{{i.title}}</a>
+                        </div>
+                        <div id="collapse4-3" class="collapsed">
+                            <div class="card-body">
+                                <p> {{i.description | safe}}
+                                   </p>
+                            </div>
+                        </div>
+                    </div>
+                    {%endif%}
+                    {%endfor%}
+                </div>
+            </div>
+            <div class="col-md-6 ">
+                <h2 class="title pl-2 pr-2 ls-m">{{cnt.3.title }}</h2>
+                <div class="accordion accordion-border accordion-boxed accordion-plus">
+                    {%for i in faqD%}
+                    {%if i.id == 1 %}
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="#collapse2-1" class="collapse">{{i.title}}</a>
+                        </div>
+                        <div id="collapse2-1" class="expanded">
+                            <div class="card-body">
+                                <p> {{i.description | safe}}
+                                   </p>
+                            </div>
+                        </div>
+                    </div>
+                    {%else%}
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="#collapse2-2" class="expand">{{i.title}}</a>
+                        </div>
+                        <div id="collapse2-2" class="collapsed">
+                            <div class="card-body">
+                                <p> {{i.description | safe}}
+                                   </p>
+                            </div>
+                        </div>
+                    </div>
+                    {%endif%}
+                    {%endfor%}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>                          
+{%endblock%}

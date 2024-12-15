@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    {%load static%}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>pamir shop</title>
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description" content="Riode - Ultimate eCommerce Template">
+    <meta name="author" content="D-THEMES">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{%static 'main_app/'%}images/icons/favicon.png">
+    <!-- Font -->
+    <link rel="preload" href="{%static 'main_app/'%}fonts/riode.ttf?5gap68" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="{%static 'main_app/'%}vendor/fontawesome-free/webfonts/fa-solid-900.woff2" as="font" type="font/woff2"
+          crossorigin="anonymous">
+    <link rel="preload" href="{%static 'main_app/'%}vendor/fontawesome-free/webfonts/fa-brands-400.woff2" as="font" type="font/woff2"
+          crossorigin="anonymous">
+    <script>
+        WebFontConfig = {
+            google: { families: ['vazir:300,400,500,600,700,800', 'vazir:400,600,700'] }
+        };
+        (function (d) {
+            var wf = d.createElement('script'), s = d.scripts[0];
+            wf.src = 'js/webfont.js';
+            wf.async = true;
+            s.parentNode.insertBefore(wf, s);
+        })(document);
+    </script>
+    <link rel="stylesheet" type="text/css" href="{%static 'main_app/'%}vendor/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{%static 'main_app/'%}vendor/animate/animate.min.css">
+    <!-- Plugins CSS File -->
+    <link rel="stylesheet" type="text/css" href="{%static 'main_app/'%}vendor/magnific-popup/magnific-popup.min.css">
+    <link rel="stylesheet" type="text/css" href="{%static 'main_app/'%}vendor/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="{%static 'main_app/'%}vendor/sticky-icon/stickyicon.css">
+    <!-- Font Vazir -->
+    <link href="{%static 'main_app/'%}fonts/vazir/font-vazir.css" rel="stylesheet" />
+    <!-- Main CSS File -->
+    <link rel="stylesheet" type="text/css" href="{%static 'main_app/'%}css/market3.min.css">
+    
+</head>
+<body class="home market3">
+    <div class="page-wrapper">
+        <h1 class="d-none"> فروشگاه لوازم کوهنوردی پامیر </h1>
+        <header class="header header-transparent rtl text-right">
+            <div class="header-middle sticky-header fix-top sticky-content">
+                <div class="container-fluid">
+                    <div class="header-right">
+                        <a href="#" class="mobile-menu-toggle">
+                            <i class="d-icon-bars2"></i>
+                        </a>
+                        <a href="market3.html" class="logo">
+                            <img src="{%static 'main_app/'%}images/index/logo.png" alt="logo" width="153" height="43" />
+                        </a>
+                        <!-- End Logo -->
+                        <nav class="main-nav">
+                            <ul class="menu">
+                                <li>
+                                    <a href="/">صفحه نخست</a>
+                                </li>
+                                
+                              
+                                <li class="menu">
+                                    <a href="/product_category">محصولات</a>
+                                    <ul>                                      
+                                        <li>
+                                            <a href="#"> کفش کوهنوردی </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"> کتانی سنگنوردی </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"> لوازم تخصصی </a>
+                                        </li>
+                                    </ul>
+                                </li>                               
+                                <li>
+                                    <a href="/agency">نمایندگی ها</a>                                   
+                                </li>
+                                <li>
+                                    <a href="/about">درباره ما</a>
+                                </li>
+                                <li>
+                                    <a href="/question">سوالات متداول</a>
+                                </li>
+                                <li>
+                                    <a href="/contact_us">تماس با ما</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header-center">
+                    </div>
+                    <div class="header-left">
+                        
+                        <!-- End Dropdown Menu -->
+                       
+                        <!-- End Dropdown Menu -->
+                        <div class="header-phone ml-2 ml-sm-6" title="tel">
+                            <a href="tel:#" class="header-phone ml-2 ml-sm-6" title="tel">
+                                <i class="d-icon-phone  ml-0 ml-lg-1"></i>
+                                <span class="d-lg-show">  09126141135  </span>
+                            </a>
+                        </div>    
+                        <div class="header-phone ml-2 ml-sm-6" title="tel">
+                            <a href="tel:#" class="header-location ml-2 ml-sm-6" title="loc">
+                                <i class="d-icon-map-marker  ml-0 ml-lg-1"></i>
+                                <span class="d-lg-show">  خیابان کارگر شمالی،خیابان نصرت غربی،شماره 88،طبقه 2  </span>
+                            </a>
+                        </div>  
+                        <!-- End Divider -->
+                        <div class="header-search hs-toggle ml-4">
+                            <a href="#" class="search-toggle" title="search-toggle">
+                                <i class="d-icon-search"></i>
+                            </a>
+                            <form action="#" class="input-wrapper">
+                                <input type="text" class="form-control text-left" name="search" autocomplete="off"
+                                       placeholder="کلمه کلیدی را وارد کنید" required />
+                                <button class="btn btn-search" type="submit" title="submit-button">
+                                    <i class="d-icon-search"></i>
+                                </button>
+                                
+                            </form>
+                        </div>
+                        <!-- End Header Search -->
+                        <a href="{%static 'main_app/'%}ajax/login.html" class="login-link hs-toggle ml-4" title="login">
+                            <i class="d-icon-user"></i>
+                        </a>
+                       
+                        <div class="dropdown wishlist wishlist-dropdown off-canvas ml-4 d-lg-show">
+                            <a href="wishlist.html" class="wishlist-toggle" title="wishlist">
+                                <i class="d-icon-heart"></i>
+                            </a>
+                            <div class="canvas-overlay"></div>
+                            <!-- End Wishlist Toggle -->
+                            <div class="dropdown-box scrollable">
+                                <div class="canvas-header">
+                                    <h4 class="canvas-title">موردعلاقه ها</h4>
+                                    <a href="#" class="btn btn-dark btn-link btn-icon-right btn-close">
+                                        بستن<i class="d-icon-arrow-left"></i><span class="sr-only">موردعلاقه ها</span>
+                                    </a>
+                                </div>
+                                <div class="products scrollable">
+                                    <div class="product product-wishlist">
+                                        <figure class="product-media">
+                                            <a href="product.html">
+                                                <img src="{%static 'main_app/'%}images/wishlist/product-1.jpg" width="100" height="100"
+                                                     alt="product" />
+                                            </a>
+                                            <button class="btn btn-link btn-close">
+                                                <i class="fas fa-times"></i><span class="sr-only">بستن</span>
+                                            </button>
+                                        </figure>
+                                        <div class="product-detail">
+                                            <a href="product.html" class="product-name">کیف مشکی دخترانه</a>
+                                            <div class="price-box">
+                                                <span class="product-price"> 800,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of wishlist Product -->
+                                    <div class="product product-wishlist">
+                                        <figure class="product-media">
+                                            <a href="product.html">
+                                                <img src="{%static 'main_app/'%}images/wishlist/product-2.jpg" width="100" height="100"
+                                                     alt="product" />
+                                            </a>
+                                            <button class="btn btn-link btn-close">
+                                                <i class="fas fa-times"></i><span class="sr-only">بستن</span>
+                                            </button>
+                                        </figure>
+                                        <div class="product-detail">
+                                            <a href="product.html" class="product-name">
+                                                شال آبی رزبافت
+                                            </a>
+                                            <div class="price-box">
+                                                <span class="product-price"> 800,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of wishlist Product -->
+                                    <div class="product product-wishlist">
+                                        <figure class="product-media">
+                                            <a href="product.html">
+                                                <img src="{%static 'main_app/'%}images/wishlist/product-3.jpg" width="100" height="100"
+                                                     alt="product" />
+                                            </a>
+                                            <button class="btn btn-link btn-close">
+                                                <i class="fas fa-times"></i><span class="sr-only">بستن</span>
+                                            </button>
+                                        </figure>
+                                        <div class="product-detail">
+                                            <a href="product.html" class="product-name">شلوار بگ</a>
+                                            <div class="price-box">
+                                                <span class="product-price"> 800,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of wishlist Product -->
+                                </div>
+                                <a href="wishlist.html" class="btn btn-dark wishlist-btn mt-4">
+                                    <span>
+                                        نمایش لیست
+                                    </span>
+                                </a>
+                                <!-- End of Products  -->
+                            </div>
+                            <!-- End Dropdown Box -->
+                        </div>
+                        <div class="dropdown cart-dropdown type2 mr-0 mr-lg-2">
+                            <a href="#" class="cart-toggle link">
+                                <i class="d-icon-bag"><span class="cart-count">2</span></i>
+                            </a>
+                            <div class="dropdown-box">
+                                <div class="products scrollable">
+                                    <div class="product product-cart">
+                                        <figure class="product-media">
+                                            <a href="demo-food3-product.html">
+                                                <img src="{%static 'main_app/'%}images/demos/demo-market3/product/1-1-1.jpg" alt="product"
+                                                     width="80" height="88" />
+                                            </a>
+                                            <button class="btn btn-link btn-close">
+                                                <i class="fas fa-times"></i><span class="sr-only">بستن</span>
+                                            </button>
+                                        </figure>
+                                        <div class="product-detail">
+                                            <a href="demo-food3-product.html" class="product-name">
+                                                کیف چرم زنانه آبی
+                                            </a>
+                                            <div class="price-box">
+                                                <span class="product-quantity">1</span>
+                                                <span class="product-price">2,800,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of Cart Product -->
+                                    <div class="product product-cart">
+                                        <figure class="product-media">
+                                            <a href="demo-food3-product.html">
+                                                <img src="{%static 'main_app/'%}images/demos/demo-market3/product/2-1-1-300x338.jpg"
+                                                     alt="product" width="80" height="88" />
+                                            </a>
+                                            <button class="btn btn-link btn-close">
+                                                <i class="fas fa-times"></i><span class="sr-only">بستن</span>
+                                            </button>
+                                        </figure>
+                                        <div class="product-detail">
+                                            <a href="demo-food3-product.html" class="product-name">
+                                                صندلی راحتی مخمل آبی
+                                            </a>
+                                            <div class="price-box">
+                                                <span class="product-quantity">1</span>
+                                                <span class="product-price">1,800,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of Cart Product -->
+                                </div>
+                                <!-- End of Products  -->
+                                <div class="cart-total">
+                                    <label>جمع قبل از تخفیف:</label>
+                                    <span class="price">4,600,000 تومان</span>
+                                </div>
+                                <!-- End of Cart Total -->
+                                <div class="cart-action">
+                                    <a href="cart.html" class="btn btn-dark btn-link">نمایش خرید </a>
+                                    <a href="checkout.html" class="btn btn-dark"><span>پرداخت</span></a>
+                                </div>
+                                <!-- End of Cart Action -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- End Header -->
+        <main class="main">
+            <section class="intro-section p-relative">
+                <div class="owl-carousel owl-theme owl-nav-fade owl-nav-arrow intro-slider animation-slider row cols-1 gutter-no ltr"
+                     data-owl-options="{
+                        'dotsContainer': '.owl-dots-container',
+                        'nav': false,
+                        'dots': false,
+                        'loop': true,
+                        'items': 1,
+                        'autoplay': false,
+                        'autoplayTimeout': 8000,
+                        'responsive': {
+                            '768': {
+                                'dots': true
+                            }
+                        }
+                    }">
+                    <div class="intro-slider intro-slide2 banner rtl text-right">
+                        <figure>
+                            <img src="{{img.3.photo.url}}" alt="intro-banner"
+                                 width="1903" height="798" style="background-color: #333438;" />
+                        </figure>
+                        <div class="row p-absolute banner-content mt-10 mt-md-0  pt-10 pt-md-0">
+                            <div class="col-12 col-md-6 banner-figure">
+                                <figure class="p-absolute y-50 x-50 floating"
+                                        data-options='{"invertX":true,"invertY":true}'>
+                                    <img src="{{img.5.photo.url}}"
+                                         class="layer mx-auto " alt="slide2-shoes" width="779" height="500">
+                                </figure>
+                            </div>
+                            <div class="col-12 col-md-6 banner-text">
+                                <div class="p-absolute y-50  mt-lg-10 pt-1">
+                                    <h3 class="banner-subtitle slide-animate ls-m text-primary font-weight-normal"
+                                        data-animation-options="{'name': 'blurIn', 'duration': '1.2s', 'delay': '.2s'}">
+                                        {{cnt.2.text | safe}}  
+                                    </h3>
+                                    <h3 class="banner-title font-weight-bold mb-9 slide-animate text-white"
+                                        data-animation-options="{'name': 'fadeInUpShorter', 'duration': '1s', 'delay': '1.4s'}">
+                                        {{cnt.3.text | safe}}
+                                    </h3>
+                                    <a href="market3-shop.html"
+                                       class="btn btn-dark btn-rounded slide-animate ls-normal mb-2 text-uppercase"
+                                       data-animation-options="{'name': 'fadeInUpShorter', 'duration': '1s', 'delay': '1.8s'}">
+                                        مشاهده و انتخاب<i class="d-icon-arrow-left"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="intro-slider intro-slide2 banner rtl text-right">
+                        <figure>
+                            <img src="{{img.0.photo.url}}" alt="intro-banner"
+                                 width="1903" height="798" style="background-color: #333438;" />
+                        </figure>
+                        <div class="row p-absolute banner-content mt-10 mt-md-0  pt-10 pt-md-0">
+                            <div class="col-12 col-md-6 banner-figure">
+                                <figure class="p-absolute y-50 x-50 floating"
+                                        data-options='{"invertX":true,"invertY":true}'>
+                                    <img src="{{img.2.photo.url}}"
+                                         class="layer mx-auto " alt="slide2-shoes" width="779" height="500">
+                                </figure>
+                            </div>
+                            <div class="col-12 col-md-6 banner-text">
+                                <div class="p-absolute y-50  mt-lg-10 pt-1">
+                                    <h3 class="banner-subtitle slide-animate ls-m text-primary font-weight-normal"
+                                        data-animation-options="{'name': 'blurIn', 'duration': '1.2s', 'delay': '.2s'}">
+                                        {{cnt.0.text | safe}}  
+                                    </h3>
+                                    <h2 class="banner-title font-weight-bold mb-9 slide-animate text-white"
+                                        data-animation-options="{'name': 'fadeInUpShorter', 'duration': '1s', 'delay': '1.4s'}">
+                                        {{cnt.1.text | safe}}  
+                                    </h2>
+                                    <a href="market3-shop.html"
+                                       class="btn btn-dark btn-rounded slide-animate ls-normal mb-2 text-uppercase"
+                                       data-animation-options="{'name': 'fadeInUpShorter', 'duration': '1s', 'delay': '1.8s'}">
+                                        مشاهده و انتخاب<i class="d-icon-arrow-left"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="intro-slider intro-slide2 banner rtl text-right">
+                        <figure>
+                            <img src="{{img.6.photo.url}}" alt="intro-banner"
+                                 width="1903" height="798" style="background-color: #333438;" />
+                        </figure>
+                        <div class="row p-absolute banner-content mt-10 mt-md-0  pt-10 pt-md-0">
+                            <div class="col-12 col-md-6 banner-figure">
+                                <figure class="p-absolute y-50 x-50 floating"
+                                        data-options='{"invertX":true,"invertY":true}'>
+                                    <img src="{{img.8.photo.url}}"
+                                         class="layer mx-auto " alt="slide2-shoes" width="779" height="500">
+                                </figure>
+                            </div>
+                            <div class="col-12 col-md-6 banner-text">
+                                <div class="p-absolute y-50  mt-lg-10 pt-1">
+                                    <h3 class="banner-subtitle slide-animate ls-m text-primary font-weight-normal"
+                                        data-animation-options="{'name': 'blurIn', 'duration': '1.2s', 'delay': '.2s'}">
+                                        {{cnt.4.text | safe}}  
+                                    <h2 class="banner-title font-weight-bold mb-9 slide-animate text-white"
+                                        data-animation-options="{'name': 'fadeInUpShorter', 'duration': '1s', 'delay': '1.4s'}">
+                                        {{cnt.5.text | safe}}  
+                                    </h2>
+                                    <a href="market3-shop.html"
+                                       class="btn btn-dark btn-rounded slide-animate ls-normal mb-2 text-uppercase"
+                                       data-animation-options="{'name': 'fadeInUpShorter', 'duration': '1s', 'delay': '1.8s'}">
+                                        مشاهده و انتخاب<i class="d-icon-arrow-left"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                  
+                </div>
+                <div class="owl-dots-container p-absolute y-50 d-lg-show d-flex flex-column mt-10 rtl text-right">
+                    <button title="dots-container" class="owl-dot">
+                        <img src="{{img.4.photo.url}}" alt="intro-dot" width="91"
+                             height="91" />
+                        <span class="dot-content">
+                            <span class="dot-index">01</span>
+                        </span>
+                    </button>
+                    <button title="dots-container" class="owl-dot">
+                        <img src="{{img.1.photo.url}}" alt="intro-dot" width="91"
+                             height="91" />
+                        <span class="dot-content">
+                            <span class="dot-index">02</span>
+                        </span>
+                    </button>
+                    <button title="dots-container" class="owl-dot">
+                        <img src="{{img.7.photo.url}}" alt="intro-dot" width="91"
+                             height="91" />
+                        <span class="dot-content">
+                            <span class="dot-index">03</span>
+                        </span>
+                    </button>
+                </div>
+            </section>
+            <!-- End intro section(Header) -->
+            <section class=" rtl text-right">
+                <div class="row gutter-no ">
+                    <div class="col-lg-12 ">
+                        <div class="page-content">
+                            <!-- End Product daels wrapper -->
+                            <section class="service-wrapper container mt-8 mb-10 appear-animate">
+                                <div class="owl-carousel owl-theme row cols-lg-3 cols-md-2 cols-1" data-owl-options="{
+                                     'rtl':true,
+                                    'nav': false,
+                                    'dots': false,
+                                    'loop': false,
+                                    'autoplay': true,
+                                    'margin': 20,
+                                    'responsive': {
+                                        '0': {
+                                            'items': 1
+                                        },
+                                        '576': {
+                                            'items': 2
+                                        },
+                                        '992': {
+                                            'items': 3
+                                        }
+                                    }
+                                }">
+                                    <div class="icon-box icon-box-side icon-box1 appear-animate" data-animation-options="{
+                                            'name': 'fadeInRightShorter',
+                                            'delay': '.3s'
+                                        }">
+                                        <i class="icon-box-icon d-icon-truck"></i>
+                                        <div class="icon-box-content">
+                                            <h4 class="icon-box-title text-capitalize">ارسال رایگان و مرجوعی 
+                                            </h4>
+                                            <p class="ls-s">سراسر کشور</p>
+                                        </div>
+                                    </div>
+                                    <div class="icon-box icon-box-side icon-box2 appear-animate" data-animation-options="{
+                                            'name': 'fadeInRightShorter',
+                                            'delay': '.4s'
+                                        }">
+                                        <i class="icon-box-icon d-icon-service"></i>
+                                        <div class="icon-box-content">
+                                            <h4 class="icon-box-title text-capitalize">پشتیبانی 24 ساعته</h4>
+                                            <p class="ls-s">دسترسی فوری به پشتیبان های ما</p>
+                                        </div>
+                                    </div>
+                                    <div class="icon-box icon-box-side icon-box3 appear-animate" data-animation-options="{
+                                            'name': 'fadeInRightShorter',
+                                            'delay': '.5s'
+                                        }">
+                                        <i class="icon-box-icon d-icon-secure"></i>
+                                        <div class="icon-box-content">
+                                            <h4 class="icon-box-title text-capitalize">پرداخت 100% مطمئن</h4>
+                                            <p class="ls-s">ما تضمین پرداخت امن را داریم</p>
+                                        </div>
+                                    </div>
+                                    <div class="icon-box icon-box-side icon-box4 appear-animate" data-animation-options="{
+                                            'name': 'fadeInRightShorter',
+                                            'delay': '.5s'
+                                        }">
+                                        <i class="icon-box-icon d-icon-money"></i>
+                                        <div class="icon-box-content">
+                                            <h4 class="icon-box-title text-capitalize"> گارانتی مرجوعی </h4>
+                                            <p class="ls-s">تضمین 3 روزه مرجوعی</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <div class="mb-10"></div>
+                             <!-- End part1 (service) --> 
+                             <section class="banner-section pt-md-6 pb-8">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-6 appear-animate"
+                                            data-animation-options="{'name': 'fadeInRightShorter', 'delay': '.3s'}">
+                                            <div class="banner h-100">
+                                                <div class="banner-content pr-lg-4 y-50 tj">
+                                                    <h3 class="title text-black text-uppercase">{{cnt.6.title}}   
+                                                    </h3>
+                                                    <h6 class="text-black mb-6" style="margin-top: -30px;">                                    
+                                                        {{cnt.6.text | safe}}  
+                                                    </h6>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 appear-animate"
+                                            data-animation-options="{'name': 'fadeInLeftShorter', 'delay': '.5s'}">
+                                            <div class="card-description overlay-zoom">
+                                                <figure class="p-relative">
+                                                    <img src="{{img.9.photo.url}}" width="600" height="450"
+                                                        alt="Product" class="w-100 d-block">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section> 
+                            <div class="mb-10"></div>
+                             <!-- End part2 (description1) -->  
+                             <section class="banner-section pt-md-6 pb-8" style="direction: ltr;">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-6 appear-animate"
+                                            data-animation-options="{'name': 'fadeInRightShorter', 'delay': '.3s'}">
+                                            <div class="banner h-100">
+                                                <div class="banner-content pr-lg-4 y-50 tj" style="direction: rtl;">
+                                                    <h3 class="title text-black text-uppercase" >  
+                                                        {{cnt.7.title}} 
+                                                    </h3>
+                                                    <h6 class="text-black mb-6" style="margin-top: -30px;">                                    
+                                                        {{cnt.7.text | safe}}  
+                                                    </h6>
+                                                    <a href="demo32-shop.html"
+                                                        class="btn btn-dark btn-ellipse btn-icon-right mb-1">مشاهده و انتخاب<i
+                                                           class="d-icon-arrow-left"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 appear-animate"
+                                            data-animation-options="{'name': 'fadeInLeftShorter', 'delay': '.5s'}">
+                                            <div class="card-description overlay-zoom">
+                                                <figure class="p-relative">
+                                                    <img src="{{img.10.photo.url}}" width="600" height="450"
+                                                        alt="Product" class="w-100 d-block">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section> 
+                            <div class="mb-10"></div>
+                             <!-- End part3 (description2) --> 
+                            <section class="product-wrapper container pt-6 mt-10 appear-animate" data-animation-options="{
+                                'delay': '.3s'
+                            }">
+                                <h2 class="title title-simple">{{cnt.8.title}}</h2>
+                                <h5 style="text-align: center;">
+                                    {{cnt.8.text | safe}}
+                                </h5> 
+                                <div class="owl-carousel owl-theme row cols-lg-4 cols-md-3 cols-xs-2 cols-1" data-owl-options="{
+                                         'rtl':true,
+                                        'nav': false,
+                                        'dots': true,
+                                        'margin': 20,
+                                        'responsive': {
+                                            '0': {
+                                                'items': 1
+                                            },
+                                            '480': {
+                                                'items': 2
+                                            },
+                                            '768': {
+                                                'items': 3
+                                            },
+                                            '992': {
+                                                'items': 4,
+                                                'dots': false
+                                            }
+                                        }
+                                    }">
+                                        <div class="category category-absolute category-classic ">
+                                            <a href="demo9-shop.html">
+                                                <figure class="category-media">
+                                                    <img src="{%static 'main_app/'%}images/index/1l.jpeg" alt="Cateogry" width="280"
+                                                         height="280" />
+                                                </figure>
+                                                <div class="category-content rtl">
+                                                    <h4 class="category-name"> کفش کوهنوردی FITWELL </h4>
+                                                    <span class="category-count">20 محصول</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="category category-absolute category-classic">
+                                            <a href="demo9-shop.html">
+                                                <figure class="category-media">
+                                                    <img src="{%static 'main_app/'%}images/index/2l.jpeg" alt="Cateogry" width="280"
+                                                         height="280" />
+                                                </figure>
+                                                <div class="category-content rtl">
+                                                    <h4 class="category-name"> کتانی سنگنوردی EVOLV </h4>
+                                                    <span class="category-count">30 محصولات</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="category category-absolute category-classic">
+                                            <a href="demo9-shop.html">
+                                                <figure class="category-media">
+                                                    <img src="{%static 'main_app/'%}images/index/3l.jpeg" alt="Cateogry" width="280"
+                                                         height="280" />
+                                                </figure>
+                                                <div class="category-content rtl">
+                                                    <h4 class="category-name"> طناب BLUEWATER </h4>
+                                                    <span class="category-count">10 محصولات</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="category category-absolute category-classic">
+                                            <a href="demo9-shop.html">
+                                                <figure class="category-media">
+                                                    <img src="{%static 'main_app/'%}images/index/4l.jpeg" alt="Cateogry" width="280"
+                                                         height="280" />
+                                                </figure>
+                                                <div class="category-content rtl">
+                                                    <h4 class="category-name"> باتوم MASTERS </h4>
+                                                    <span class="category-count">7 محصولات</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                </div>
+                            </section>
+                            <div class="mb-10"></div>
+                             <!-- End part4 (category) -->
+                            <section class="products-wrapper container pt-5 mt-10 pb-4 appear-animate" data-animation-options="{
+                                'delay': '.3s'
+                            }">
+                                <div class="tab tab-nav-simple tab-nav-center rtl">
+                                    <ul class="nav nav-tabs">
+                                        <li class="nav-item">
+                                            <a class="nav-link title active" href="#featured">ویژه</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link title" href="#new-arrivals"> محصولات جدید</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link title" href="#best-sellers"> پرفروش ترین ها</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="featured">
+                                            <div class="owl-carousel owl-theme row cols-lg-4 cols-md-3 cols-2" data-owl-options="{
+                                                 'rtl':true,
+                                                'nav': false,
+                                                'dots': false,
+                                                'margin': 20,
+                                                'autoplay': false,
+                                                'responsive': {
+                                                    '0': {
+                                                        'items': 2
+                                                    },
+                                                    '576': {
+                                                        'items': 2
+                                                    },
+                                                    '768': {
+                                                        'items': 3
+                                                    },
+                                                    '992': {
+                                                        'items': 4
+                                                    }
+                                                }
+                                            }">
+                                                <div class="product text-center product-with-qty">
+                                                    <figure class="product-media">
+                                                        <a href="demo9-product.html">
+                                                            <img src="{%static 'main_app/'%}images/index/V1.jpg" alt="product" width="300"
+                                                                 height="338">
+                                                            <img src="{%static 'main_app/'%}images/index/V11.jpg" alt="product" width="300"
+                                                                 height="338">
+                                                        </a>
+                                                        <div class="product-label-group">
+                                                            <label class="product-label label-sale">%25 تخفیف</label>
+                                                        </div>
+                                                        <div class="product-action-vertical">
+                                                            <a href="#" class="btn-product-icon btn-wishlist"
+                                                               title="اضافه به علاقه مندی"><i class="d-icon-heart"></i></a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <a href="#" class="btn-product btn-quickview" title="نمایش ">
+                                                                نمایش
+                                                                View
+                                                            </a>
+                                                        </div>
+                                                    </figure>
+                                                    <div class="product-details rtl">
+                                                        <h3 class="product-name">
+                                                            <a href="demo9-product.html">کفش کوهنوردی BIG WALL</a>
+                                                        </h3>
+                                                        <div class="product-price">
+                                                            <ins class="new-price"> 800,000 تومان </ins><del class="old-price"> 1,200,000 تومان </del>
+                                                        </div>
+                                                        <div class="ratings-container">
+                                                            <div class="ratings-full">
+                                                                <span class="ratings" style="width:100%"></span>
+                                                                <span class="tooltiptext tooltip-top"></span>
+                                                            </div>
+                                                            <a href="demo9-product.html" class="rating-reviews">( از 16نظر )</a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <div class="product-quantity">
+                                                                <button class="quantity-minus d-icon-minus"
+                                                                        title="quantity"></button>
+                                                                <input class="quantity form-control" title="quantity-input"
+                                                                       type="number" min="1" max="1000000">
+                                                                <button class="quantity-plus d-icon-plus" title="quantity"></button>
+                                                            </div>
+                                                            <a href="#" class="btn-product btn-cart" data-toggle="modal"
+                                                               data-target="#addCartModal" title="اضافه به خرید">
+                                                                <i class="d-icon-bag"></i><span>مشاهده و انتخاب</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product text-center product-with-qty">
+                                                    <figure class="product-media">
+                                                        <a href="demo9-product.html">
+                                                            <img src="{%static 'main_app/'%}images/index/V2.jpg" alt="product" width="300"
+                                                                 height="338">
+                                                            <img src="{%static 'main_app/'%}images/index/V22.jpg" alt="product" width="300"
+                                                                 height="338">
+                                                        </a>
+                                                        <div class="product-action-vertical">
+                                                            <a href="#" class="btn-product-icon btn-wishlist"
+                                                               title="اضافه به علاقه مندی"><i class="d-icon-heart"></i></a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <a href="#" class="btn-product btn-quickview" title="نمایش ">
+                                                                نمایش
+                                                            </a>
+                                                        </div>
+                                                    </figure>
+                                                    <div class="product-details rtl">
+                                                        <h3 class="product-name">
+                                                            <a href="demo9-product.html"> باتوم MASTERS </a>
+                                                        </h3>
+                                                        <div class="product-price">
+                                                            <ins class="new-price">900,000 تومان</ins><del class="old-price"> 1,200,000 تومان </del>
+                                                        </div>
+                                                        <div class="ratings-container">
+                                                            <div class="ratings-full">
+                                                                <span class="ratings" style="width:100%"></span>
+                                                                <span class="tooltiptext tooltip-top"></span>
+                                                            </div>
+                                                            <a href="demo9-product.html" class="rating-reviews">( از 16نظر )</a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <div class="product-quantity">
+                                                                <button class="quantity-minus d-icon-minus"
+                                                                        title="quantity"></button>
+                                                                <input class="quantity form-control" title="quantity-input"
+                                                                       type="number" min="1" max="1000000">
+                                                                <button class="quantity-plus d-icon-plus" title="quantity"></button>
+                                                            </div>
+                                                            <a href="#" class="btn-product btn-cart" data-toggle="modal"
+                                                               data-target="#addCartModal" title="اضافه به خرید">
+                                                                <i class="d-icon-bag"></i><span>مشاهده و انتخاب</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product text-center product-with-qty">
+                                                    <figure class="product-media">
+                                                        <a href="demo9-product.html">
+                                                            <img src="{%static 'main_app/'%}images/index/V3.jpg" alt="product" width="300"
+                                                                 height="338">
+                                                            <img src="{%static 'main_app/'%}images/index/V33.jpg" alt="product" width="300"
+                                                                 height="338">
+                                                        </a>
+                                                        <div class="product-label-group">
+                                                            <label class="product-label label-sale">%25 تخفیف</label>
+                                                        </div>
+                                                        <div class="product-action-vertical">
+                                                            <a href="#" class="btn-product-icon btn-wishlist"
+                                                               title="اضافه به علاقه مندی"><i class="d-icon-heart"></i></a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <a href="#" class="btn-product btn-quickview" title="نمایش ">
+                                                                نمایش
+                                                            </a>
+                                                        </div>
+                                                    </figure>
+                                                    <div class="product-details rtl">
+                                                        <h3 class="product-name">
+                                                            <a href="demo9-product.html"> کتانی سنگنوردی SHAMAN </a>
+                                                        </h3>
+                                                        <div class="product-price">
+                                                            <ins class="new-price"> 800,000 تومان </ins><del class="old-price"> 1,200,000 تومان </del>
+                                                        </div>
+                                                        <div class="ratings-container">
+                                                            <div class="ratings-full">
+                                                                <span class="ratings" style="width:100%"></span>
+                                                                <span class="tooltiptext tooltip-top"></span>
+                                                            </div>
+                                                            <a href="demo9-product.html" class="rating-reviews">( از 16نظر )</a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <div class="product-quantity">
+                                                                <button class="quantity-minus d-icon-minus"
+                                                                        title="quantity"></button>
+                                                                <input class="quantity form-control" title="quantity-input"
+                                                                       type="number" min="1" max="1000000">
+                                                                <button class="quantity-plus d-icon-plus" title="quantity"></button>
+                                                            </div>
+                                                            <a href="#" class="btn-product btn-cart" data-toggle="modal"
+                                                               data-target="#addCartModal" title="اضافه به خرید">
+                                                                <i class="d-icon-bag"></i><span>مشاهده و انتخاب</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product text-center product-with-qty">
+                                                    <figure class="product-media">
+                                                        <a href="demo9-product.html">
+                                                            <img src="{%static 'main_app/'%}images/index/v4.jpg" alt="product" width="300"
+                                                                 height="338">
+                                                            <img src="{%static 'main_app/'%}images/index/v44.jpg" alt="product" width="300"
+                                                                 height="338">
+                                                        </a>
+                                                        <div class="product-action-vertical">
+                                                            <a href="#" class="btn-product-icon btn-wishlist"
+                                                               title="اضافه به علاقه مندی"><i class="d-icon-heart"></i></a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <a href="#" class="btn-product btn-quickview" title="نمایش ">
+                                                                نمایش
+                                                            </a>
+                                                        </div>
+                                                    </figure>
+                                                    <div class="product-details rtl">
+                                                        <h3 class="product-name">
+                                                            <a href="demo9-product.html">  طناب BLUEWATER </a>
+                                                        </h3>
+                                                        <div class="product-price">
+                                                            <ins class="new-price">900,000 تومان</ins><del class="old-price"> 1,200,000 تومان </del>
+                                                        </div>
+                                                        <div class="ratings-container">
+                                                            <div class="ratings-full">
+                                                                <span class="ratings" style="width:100%"></span>
+                                                                <span class="tooltiptext tooltip-top"></span>
+                                                            </div>
+                                                            <a href="demo9-product.html" class="rating-reviews">( از 16نظر )</a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <div class="product-quantity">
+                                                                <button class="quantity-minus d-icon-minus"
+                                                                        title="quantity"></button>
+                                                                <input class="quantity form-control" title="quantity-input"
+                                                                       type="number" min="1" max="1000000">
+                                                                <button class="quantity-plus d-icon-plus" title="quantity"></button>
+                                                            </div>
+                                                            <a href="#" class="btn-product btn-cart" data-toggle="modal"
+                                                               data-target="#addCartModal" title="اضافه به خرید">
+                                                                <i class="d-icon-bag"></i><span>مشاهده و انتخاب</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="new-arrivals">
+                                            <div class="owl-carousel owl-theme row cols-lg-4 cols-md-3 cols-2" data-owl-options="{
+                                                 'rtl':true,
+                                                'nav': false,
+                                                'dots': false,
+                                                'margin': 20,
+                                                'autoplay': false,
+                                                'responsive': {
+                                                    '0': {
+                                                        'items': 2
+                                                    },
+                                                    '576': {
+                                                        'items': 2
+                                                    },
+                                                    '768': {
+                                                        'items': 3
+                                                    },
+                                                    '992': {
+                                                        'items': 4
+                                                    }
+                                                }
+                                            }">
+                                                <div class="product text-center product-with-qty">
+                                                    <figure class="product-media">
+                                                        <a href="demo9-product.html">
+                                                            <img src="{%static 'main_app/'%}images/index/J1.jpg" alt="product" width="300"
+                                                                 height="338">
+                                                            <img src="{%static 'main_app/'%}images/index/J11.jpg" alt="product" width="300"
+                                                                 height="338">
+                                                        </a>
+                                                        <div class="product-label-group">
+                                                            <label class="product-label label-sale">%25 تخفیف</label>
+                                                        </div>
+                                                        <div class="product-action-vertical">
+                                                            <a href="#" class="btn-product-icon btn-wishlist"
+                                                               title="اضافه به علاقه مندی"><i class="d-icon-heart"></i></a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <a href="#" class="btn-product btn-quickview" title="نمایش ">
+                                                                نمایش
+                                                            </a>
+                                                        </div>
+                                                    </figure>
+                                                    <div class="product-details rtl">
+                                                        <h3 class="product-name">
+                                                            <a href="demo9-product.html"> کوله کوهنوردی DEUTER </a>
+                                                        </h3>
+                                                        <div class="product-price">
+                                                            <span class="price"> 21,500,000 تومان </span>
+                                                        </div>
+                                                        <div class="ratings-container">
+                                                            <div class="ratings-full">
+                                                                <span class="ratings" style="width:100%"></span>
+                                                                <span class="tooltiptext tooltip-top"></span>
+                                                            </div>
+                                                            <a href="demo9-product.html" class="rating-reviews">( از 16نظر )</a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <div class="product-quantity">
+                                                                <button class="quantity-minus d-icon-minus"
+                                                                        title="quantity"></button>
+                                                                <input class="quantity form-control" title="quantity-input"
+                                                                       type="number" min="1" max="1000000">
+                                                                <button class="quantity-plus d-icon-plus" title="quantity"></button>
+                                                            </div>
+                                                            <a href="#" class="btn-product btn-cart" data-toggle="modal"
+                                                               data-target="#addCartModal" title="اضافه به خرید">
+                                                                <i class="d-icon-bag"></i><span>مشاهده و انتخاب</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product text-center product-with-qty">
+                                                    <figure class="product-media">
+                                                        <a href="demo9-product.html">
+                                                            <img src="{%static 'main_app/'%}images/index/J2.jpg" alt="product" width="300"
+                                                                 height="338">
+                                                            <img src="{%static 'main_app/'%}images/index/J22.jpg" alt="product" width="300"
+                                                                 height="338">
+                                                        </a>
+                                                        <div class="product-action-vertical">
+                                                            <a href="#" class="btn-product-icon btn-wishlist"
+                                                               title="اضافه به علاقه مندی"><i class="d-icon-heart"></i></a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <a href="#" class="btn-product btn-quickview" title="نمایش ">
+                                                                نمایش
+                                                                View
+                                                            </a>
+                                                        </div>
+                                                    </figure>
+                                                    <div class="product-details rtl">
+                                                        <h3 class="product-name">
+                                                            <a href="demo9-product.html">کلاه آفتابی سه تکه</a>
+                                                        </h3>
+                                                        <div class="product-price">
+                                                            <span class="price"> 21,500,000 تومان </span>
+                                                        </div>
+                                                        <div class="ratings-container">
+                                                            <div class="ratings-full">
+                                                                <span class="ratings" style="width:100%"></span>
+                                                                <span class="tooltiptext tooltip-top"></span>
+                                                            </div>
+                                                            <a href="demo9-product.html" class="rating-reviews">( از 16نظر )</a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <div class="product-quantity">
+                                                                <button class="quantity-minus d-icon-minus"
+                                                                        title="quantity"></button>
+                                                                <input class="quantity form-control" title="quantity-input"
+                                                                       type="number" min="1" max="1000000">
+                                                                <button class="quantity-plus d-icon-plus" title="quantity"></button>
+                                                            </div>
+                                                            <a href="#" class="btn-product btn-cart" data-toggle="modal"
+                                                               data-target="#addCartModal" title="اضافه به خرید">
+                                                                <i class="d-icon-bag"></i><span>مشاهده و انتخاب</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product text-center product-with-qty">
+                                                    <figure class="product-media">
+                                                        <a href="demo9-product.html">
+                                                            <img src="{%static 'main_app/'%}images/index/j3.jpg" alt="product" width="300"
+                                                                 height="338">
+                                                            <img src="{%static 'main_app/'%}images/index/j33.jpg" alt="product" width="300"
+                                                                 height="338">
+                                                        </a>
+                                                        <div class="product-label-group">
+                                                            <label class="product-label label-sale">%25 تخفیف</label>
+                                                        </div>
+                                                        <div class="product-action-vertical">
+                                                            <a href="#" class="btn-product-icon btn-wishlist"
+                                                               title="اضافه به علاقه مندی"><i class="d-icon-heart"></i></a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <a href="#" class="btn-product btn-quickview" title="نمایش ">
+                                                                نمایش
+                                                            </a>
+                                                        </div>
+                                                    </figure>
+                                                    <div class="product-details rtl">
+                                                        <h3 class="product-name">
+                                                            <a href="demo9-product.html"> کیف کمری SNOW HAWK </a>
+                                                        </h3>
+                                                        <div class="product-price">
+                                                            <span class="price"> 230,000 تومان </span>
+                                                        </div>
+                                                        <div class="ratings-container">
+                                                            <div class="ratings-full">
+                                                                <span class="ratings" style="width:100%"></span>
+                                                                <span class="tooltiptext tooltip-top"></span>
+                                                            </div>
+                                                            <a href="demo9-product.html" class="rating-reviews">( از 16نظر )</a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <div class="product-quantity">
+                                                                <button class="quantity-minus d-icon-minus"
+                                                                        title="quantity"></button>
+                                                                <input class="quantity form-control" title="quantity-input"
+                                                                       type="number" min="1" max="1000000">
+                                                                <button class="quantity-plus d-icon-plus" title="quantity"></button>
+                                                            </div>
+                                                            <a href="#" class="btn-product btn-cart" data-toggle="modal"
+                                                               data-target="#addCartModal" title="اضافه به خرید">
+                                                                <i class="d-icon-bag"></i><span>مشاهده و انتخاب</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product text-center product-with-qty">
+                                                    <figure class="product-media">
+                                                        <a href="demo9-product.html">
+                                                            <img src="{%static 'main_app/'%}images/INDEX/J4.jpg" alt="product" width="300"
+                                                                 height="338">
+                                                            <img src="{%static 'main_app/'%}images/index/J44.jpg" alt="product" width="300"
+                                                                 height="338">
+                                                        </a>
+                                                        <div class="product-action-vertical">
+                                                            <a href="#" class="btn-product-icon btn-wishlist"
+                                                               title="اضافه به علاقه مندی"><i class="d-icon-heart"></i></a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <a href="#" class="btn-product btn-quickview" title="نمایش ">
+                                                                نمایش
+                                                            </a>
+                                                        </div>
+                                                    </figure>
+                                                    <div class="product-details rtl">
+                                                        <h3 class="product-name">
+                                                            <a href="demo9-product.html"> کیسه گچ BLACK DIAMOND </a>
+                                                        </h3>
+                                                        <div class="product-price">
+                                                            <span class="price"> 230,000 تومان </span>
+                                                        </div>
+                                                        <div class="ratings-container">
+                                                            <div class="ratings-full">
+                                                                <span class="ratings" style="width:100%"></span>
+                                                                <span class="tooltiptext tooltip-top"></span>
+                                                            </div>
+                                                            <a href="demo9-product.html" class="rating-reviews">( از 16نظر )</a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <div class="product-quantity">
+                                                                <button class="quantity-minus d-icon-minus"
+                                                                        title="quantity"></button>
+                                                                <input class="quantity form-control" title="quantity-input"
+                                                                       type="number" min="1" max="1000000">
+                                                                <button class="quantity-plus d-icon-plus" title="quantity"></button>
+                                                            </div>
+                                                            <a href="#" class="btn-product btn-cart" data-toggle="modal"
+                                                               data-target="#addCartModal" title="اضافه به خرید">
+                                                                <i class="d-icon-bag"></i><span>مشاهده و انتخاب</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="best-sellers">
+                                            <div class="owl-carousel owl-theme row cols-lg-4 cols-md-3 cols-2" data-owl-options="{
+                                                 'rtl':true,
+                                                'nav': false,
+                                                'dots': false,
+                                                'margin': 20,
+                                                'autoplay': false,
+                                                'responsive': {
+                                                    '0': {
+                                                        'items': 2
+                                                    },
+                                                    '576': {
+                                                        'items': 2
+                                                    },
+                                                    '768': {
+                                                        'items': 3
+                                                    },
+                                                    '992': {
+                                                        'items': 4
+                                                    }
+                                                }
+                                            }">
+                                                <div class="product text-center product-with-qty">
+                                                    <figure class="product-media">
+                                                        <a href="demo9-product.html">
+                                                            <img src="{%static 'main_app/'%}images/index/PR1.jpg" alt="product" width="300"
+                                                                 height="338">
+                                                            <img src="{%static 'main_app/'%}images/index/PR11.jpg" alt="product" width="300"
+                                                                 height="338">
+                                                        </a>
+                                                        <div class="product-label-group">
+                                                            <label class="product-label label-sale">%25 تخفیف</label>
+                                                        </div>
+                                                        <div class="product-action-vertical">
+                                                            <a href="#" class="btn-product-icon btn-wishlist"
+                                                               title="اضافه به علاقه مندی"><i class="d-icon-heart"></i></a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <a href="#" class="btn-product btn-quickview" title="نمایش ">
+                                                                نمایش
+            
+                                                            </a>
+                                                        </div>
+                                                    </figure>
+                                                    <div class="product-details rtl">
+                                                        <h3 class="product-name">
+                                                            <a href="demo9-product.html">  کتانی Zeus Birch مناسب تمامی فصل ها </a>
+                                                        </h3>
+                                                        <div class="product-price">
+                                                            <ins class="new-price"> 800,000 تومان </ins><del class="old-price"> 1,200,000 تومان </del>
+                                                        </div>
+                                                        <div class="ratings-container">
+                                                            <div class="ratings-full">
+                                                                <span class="ratings" style="width:100%"></span>
+                                                                <span class="tooltiptext tooltip-top"></span>
+                                                            </div>
+                                                            <a href="demo9-product.html" class="rating-reviews">( از 16نظر )</a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <div class="product-quantity">
+                                                                <button class="quantity-minus d-icon-minus"
+                                                                        title="quantity"></button>
+                                                                <input class="quantity form-control" title="quantity-input"
+                                                                       type="number" min="1" max="1000000">
+                                                                <button class="quantity-plus d-icon-plus" title="quantity"></button>
+                                                            </div>
+                                                            <a href="#" class="btn-product btn-cart" data-toggle="modal"
+                                                               data-target="#addCartModal" title="اضافه به خرید">
+                                                                <i class="d-icon-bag"></i><span>مشاهده و انتخاب</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product text-center product-with-qty">
+                                                    <figure class="product-media">
+                                                        <a href="demo9-product.html">
+                                                            <img src="{%static 'main_app/'%}images/index/PR2.jpg" alt="product" width="300"
+                                                                 height="338">
+                                                            <img src="{%static 'main_app/'%}images/index/PR22.jpg" alt="product" width="300"
+                                                                 height="338">
+                                                        </a>
+                                                        <div class="product-action-vertical">
+                                                            <a href="#" class="btn-product-icon btn-wishlist"
+                                                               title="اضافه به علاقه مندی"><i class="d-icon-heart"></i></a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <a href="#" class="btn-product btn-quickview" title="نمایش ">
+                                                                نمایش
+                                                            </a>
+                                                        </div>
+                                                    </figure>
+                                                    <div class="product-details rtl">
+                                                        <h3 class="product-name">
+                                                            <a href="demo9-product.html"> کتانی GHIBLI </a>
+                                                        </h3>
+                                                        <div class="product-price">
+                                                            <span class="price"> 21,500,000 تومان </span>
+                                                        </div>
+                                                        <div class="ratings-container">
+                                                            <div class="ratings-full">
+                                                                <span class="ratings" style="width:100%"></span>
+                                                                <span class="tooltiptext tooltip-top"></span>
+                                                            </div>
+                                                            <a href="demo9-product.html" class="rating-reviews">( از 16نظر )</a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <div class="product-quantity">
+                                                                <button class="quantity-minus d-icon-minus"
+                                                                        title="quantity"></button>
+                                                                <input class="quantity form-control" title="quantity-input"
+                                                                       type="number" min="1" max="1000000">
+                                                                <button class="quantity-plus d-icon-plus" title="quantity"></button>
+                                                            </div>
+                                                            <a href="#" class="btn-product btn-cart" data-toggle="modal"
+                                                               data-target="#addCartModal" title="اضافه به خرید">
+                                                                <i class="d-icon-bag"></i><span>مشاهده و انتخاب</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product text-center product-with-qty">
+                                                    <figure class="product-media">
+                                                        <a href="demo9-product.html">
+                                                            <img src="{%static 'main_app/'%}images/index/PR3.jpg" alt="product" width="300"
+                                                                 height="338">
+                                                            <img src="{%static 'main_app/'%}images/index/PR33.jpg" alt="product" width="300"
+                                                                 height="338">
+                                                        </a>
+                                                        <div class="product-label-group">
+                                                            <label class="product-label label-sale">%25 تخفیف</label>
+                                                        </div>
+                                                        <div class="product-action-vertical">
+                                                            <a href="#" class="btn-product-icon btn-wishlist"
+                                                               title="اضافه به علاقه مندی"><i class="d-icon-heart"></i></a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <a href="#" class="btn-product btn-quickview" title="نمایش ">
+                                                                نمایش
+                                                                View
+                                                            </a>
+                                                        </div>
+                                                    </figure>
+                                                    <div class="product-details rtl">
+                                                        <h3 class="product-name">
+                                                            <a href="demo9-product.html"> کفش سه پوش  GNARO 8000  </a>
+                                                        </h3>
+                                                        <div class="product-price">
+                                                            <span class="price"> 230,000 تومان </span>
+                                                        </div>
+                                                        <div class="ratings-container">
+                                                            <div class="ratings-full">
+                                                                <span class="ratings" style="width:100%"></span>
+                                                                <span class="tooltiptext tooltip-top"></span>
+                                                            </div>
+                                                            <a href="demo9-product.html" class="rating-reviews">( از 16نظر )</a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <div class="product-quantity">
+                                                                <button class="quantity-minus d-icon-minus"
+                                                                        title="quantity"></button>
+                                                                <input class="quantity form-control" title="quantity-input"
+                                                                       type="number" min="1" max="1000000">
+                                                                <button class="quantity-plus d-icon-plus" title="quantity"></button>
+                                                            </div>
+                                                            <a href="#" class="btn-product btn-cart" data-toggle="modal"
+                                                               data-target="#addCartModal" title="اضافه به خرید">
+                                                                <i class="d-icon-bag"></i><span>مشاهده و انتخاب</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product text-center product-with-qty">
+                                                    <figure class="product-media">
+                                                        <a href="demo9-product.html">
+                                                            <img src="{%static 'main_app/'%}images/index/PR4.jpg" alt="product" width="300"
+                                                                 height="338">
+                                                            <img src="{%static 'main_app/'%}images/index/PR44.jpg" alt="product" width="300"
+                                                                 height="338">
+                                                        </a>
+                                                        <div class="product-action-vertical">
+                                                            <a href="#" class="btn-product-icon btn-wishlist"
+                                                               title="اضافه به علاقه مندی"><i class="d-icon-heart"></i></a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <a href="#" class="btn-product btn-quickview" title="نمایش ">
+                                                                نمایش
+                                                            </a>
+                                                        </div>
+                                                    </figure>
+                                                    <div class="product-details rtl">
+                                                        <h3 class="product-name">
+                                                            <a href="demo9-product.html"> کوله کوهنوردی DEUTER </a>
+                                                        </h3>
+                                                        <div class="product-price">
+                                                            <ins class="new-price">900,000 تومان</ins><del class="old-price"> 1,200,000 تومان </del>
+                                                        </div>
+                                                        <div class="ratings-container">
+                                                            <div class="ratings-full">
+                                                                <span class="ratings" style="width:100%"></span>
+                                                                <span class="tooltiptext tooltip-top"></span>
+                                                            </div>
+                                                            <a href="demo9-product.html" class="rating-reviews">( از 16نظر )</a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <div class="product-quantity">
+                                                                <button class="quantity-minus d-icon-minus"
+                                                                        title="quantity"></button>
+                                                                <input class="quantity form-control" title="quantity-input"
+                                                                       type="number" min="1" max="1000000">
+                                                                <button class="quantity-plus d-icon-plus" title="quantity"></button>
+                                                            </div>
+                                                            <a href="#" class="btn-product btn-cart" data-toggle="modal"
+                                                               data-target="#addCartModal" title="اضافه به خرید">
+                                                                <i class="d-icon-bag"></i><span>مشاهده و انتخاب</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <div class="mb-10"></div>
+                            <!-- tab part4 banner-product_wrapper -->
+                            <section class="instagram-section pb-10 appear-animate" data-animation-options="{
+                                'delay': '.3s'
+                            }">
+                                <div class="container pb-8">
+                                    <h2 class="title title-simple mb-5">برندهای ما</h2> 
+                                <div class="appear-animate" data-animation-options="{
+                                    'delay': '.3s'
+                                     }" style="background-color: #ffffff;">
+                                    <div class="container">
+                                        <div class="owl-carousel owl-theme row brand-carousel cols-xl-6 cols-lg-5 cols-md-4 cols-sm-3 cols-2 gutter-no"
+                                         data-owl-options="{
+                                         'rtl':true,
+                                    'items': 7,
+                                    'nav': false,
+                                    'dots': false,
+                                    'autoplay': true,
+                                    'margin': 30,
+                                    'loop': true,
+                                    'responsive': {
+                                        '0': {
+                                            'items': 2
+                                        },
+                                        '576': {
+                                            'items': 3
+                                        },
+                                        '768': {
+                                            'items': 4
+                                        },
+                                        '992': {
+                                            'items': 5
+                                        },
+                                        '1200': {
+                                            'items': 6
+                                        }
+                                    }
+                                }">
+                                        <img src="{{img.11.photo.url}}" alt="brand" width="180" height="100" />
+                                        <img src="{{img.12.photo.url}}" alt="brand" width="180" height="100" />
+                                        <img src="{{img.13.photo.url}}" alt="brand" width="180" height="100" />
+                                        <img src="{{img.14.photo.url}}" alt="brand" width="180" height="100" />
+                                        
+                                        </div>
+                                    </div>
+                                </div> 
+                                </div>
+                            </section> 
+                            <!-- End part5 (brand)- -->
+                            <section class="instagram-section pb-10 appear-animate" data-animation-options="{
+                                'delay': '.5s'
+                            }">
+                                <div class="container pb-8">
+                                    <h2 class="title title-simple mb-5">اینستاگرام ما</h2>
+                                    <div class="owl-carousel owl-theme row cols-xl-5 cols-lg-4 cols-md-3 cols-sm-2 cols-2"
+                                         data-owl-options="{
+                                         'rtl':true,
+                                                'nav': false,
+                                                'autoplay': true,
+                                                'margin': 20,
+                                                'loop': false,
+                                                'responsive': {
+                                                    '0': {
+                                                        'items': 2
+                                                    },
+                                                    '576': {
+                                                        'items': 3
+                                                    },
+                                                    '992': {
+                                                        'items': 4
+                                                    },
+                                                    '1200': {
+                                                        'items': 6
+                                                    }
+                                                }
+                                            }">
+                                        <figure class="instagram">
+                                            <a href="#">
+                                                <img src="{{img.15.photo.url}}" alt="brand" width="180"
+                                                     height="180" />
+                                            </a>
+                                        </figure>
+                                        <figure class="instagram">
+                                            <a href="#">
+                                                <img src="{{img.16.photo.url}}" alt="brand" width="180"
+                                                     height="180" />
+                                            </a>
+                                        </figure>
+                                        <figure class="instagram">
+                                            <a href="#">
+                                                <img src="{{img.17.photo.url}}" alt="brand" width="180"
+                                                     height="180" />
+                                            </a>
+                                        </figure>
+                                        <figure class="instagram">
+                                            <a href="#">
+                                                <img src="{{img.18.photo.url}}" alt="brand" width="180"
+                                                     height="180" />
+                                            </a>
+                                        </figure>
+                                        <figure class="instagram">
+                                            <a href="#">
+                                                <img src="{{img.19.photo.url}}" alt="brand" width="180"
+                                                     height="180" />
+                                            </a>
+                                        </figure>
+                                        <figure class="instagram">
+                                            <a href="#">
+                                                <img src="{{img.20.photo.url}}" alt="brand" width="180"
+                                                     height="180" />
+                                            </a>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- End part (instagram) --> 
+                        </div>     
+                        <footer class="footer pl-4 pl-sm-6 pl-lg-8 pr-4 pr-sm-6 pr-lg-8" >
+                            <div class="footer-middle">
+                                <div class="row gutter-lg">
+                                    <div class="col-lg-9">
+                                        <div class="widget widget-newsletter">
+                                            <div class="newsletter-info">
+                                                <h3 class="widget-title">عضویت در سایت </h3>
+                                                <p><br/> همین حالا در سایت ثبت نام کنید و از خدمات ویژه مشتریان بهره مند شوید .</p>
+                                            </div>
+                                            <form action="#"
+                                                  class="input-wrapper input-wrapper-inline input-wrapper-round">
+                                                <input type="email" class="form-control text-left" name="email" id="email"
+                                                       placeholder="ایمیل آدرس را اینجا وارد کنید..." required />
+                                                <button class="btn btn-primary" type="submit">عضویت</button>
+                                            </form>
+                                        </div>
+                                        <!-- End Newsletter -->
+                                        <div class="row ">
+                                            <div class="col-lg-3 order-lg-first">
+                                                <div class="widget widget-contact">
+                                                    <h4 class="widget-title">پیوندهای مفید</h4>
+                                                    <ul class="widget-body ">
+                                                        <li>
+                                                            <a href="#"> صفحه نخست </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"> محصــولات </a>
+                                                        </li>   
+                                                        <li>
+                                                            <a href="about-us.html">حساب کاربری من</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="contact-us.html">تماس با ما</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">درباره ما </a>
+                                                        </li>                                                                                                                                                        
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 order-lg-first">
+                                                <div class="widget widget-contact">
+                                                    <h4 class="widget-title"> خدمات مشتری </h4>
+                                                    <ul class="widget-body ">
+                                                        <li>
+                                                            <a href="#"> سبد خرید </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"> تاریخچه سفارشات </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"> پیگیری سفارشات </a>
+                                                        </li>                                                       
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 order-lg-first">
+                                                <div class="widget widget-contact">
+                                                    <h4 class="widget-title"> ما را در شبکه های اجتماعی دنبال کنید </h4>
+                                                    <ul class="widget-body ">
+                                                        <li>
+                                                            <a href="#" title="social-link" class="social-link social-facebook fab fa-facebook-f"></a>
+                                                            <a href="#" title="social-link" class="social-link social-twitter fab fa-twitter"></a>
+                                                            <a href="#" title="social-link" class="social-link social-instagram fab fa-instagram"></a>
+                                                            <a href="#" title="social-link" class="social-link social-linkedin fab fa-linkedin-in"></a>
+                                                        </li>
+                                                        <li>
+                                                            
+                                                        </li>
+                                                        <li>
+                                                            
+                                                        </li>                                                       
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 order-lg-first">
+                                        <div class="widget widget-contact">
+                                            <h4 class="widget-title">اطلاعات تماس</h4>
+                                            <ul class="widget-body ">
+                                                <li>
+                                                    <label>آدرس :</label>
+                                                    <a href="#"> خیابان کارگر شمالی،خیابان نصرت غربی،شماره 88،طبقه 2     </a>
+                                                </li>
+                                                <li>
+                                                    <label>تلفن:</label>
+                                                    <a href="tel:#"> 09126141135 </a>
+                                                </li>
+                                                <li>
+                                                    <label>ایمیل:</label>
+                                                    <a href="mailto:mail@riode.com">mail@example.com</a>
+                                                </li>
+                                                <li>
+                                                    <label>روزها / ساعت کاری:</label>
+                                                    <a href="#"> دوشنبه - یکشنبه / 9:00 صبح تا 8:00 شب</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- End Widget -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End FooterMiddle -->
+                            <div class="footer-bottom d-block text-center">
+                                <p class="copyright"> &copy; 2023-2024 کلیه حقوق برای بازرگانی پامیر محفوظ است.</p>
+                            </div>
+                            <!-- End FooterBottom -->
+                        </footer>
+                        <!-- End Footer -->
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- End Main -->
+    <!-- </div> -->
+    <!-- Sticky Footer -->
+    <div class="sticky-footer sticky-content fix-bottom  rtl text-right">
+        <a href="/" class="sticky-link">
+            <i class="d-icon-home"></i>
+            <span>صفحه نخست</span>
+        </a>
+        <a href="#" class="sticky-link">
+            <i class="d-icon-volume"></i>
+            <span>سبد خرید</span>
+        </a>
+        <a href="#" class="sticky-link">
+            <i class="d-icon-heart"></i>
+            <span>علاقه مندی</span>
+        </a>
+        <a href="#" class="sticky-link">
+            <i class="d-icon-user"></i>
+            <span>حساب کاربری</span>
+        </a>
+        <div class="header-search hs-toggle dir-up">
+            <a href="#" class="search-toggle sticky-link">
+                <i class="d-icon-search"></i>
+                <span>جستجو</span>
+            </a>
+            <form action="#" class="input-wrapper">
+                <input type="text" class="form-control text-left" name="search" autocomplete="off"
+                       placeholder="کلمه کلیدی را وارد کنید" required />
+                <button class="btn btn-search" type="submit" title="submit-button">
+                    <i class="d-icon-search"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+    <!-- Scroll Top -->
+    <a id="scroll-top" href="#top" title="Top" role="button" class="scroll-top"><i class="d-icon-arrow-up"></i></a>
+    <!-- MobileMenu -->
+    <div class="mobile-menu-wrapper rtl text-right ">
+        <div class="mobile-menu-overlay">
+        </div>
+        <!-- End of Overlay -->
+        <a class="mobile-menu-close" href="#"><i class="d-icon-times"></i></a>
+        <!-- End of CloseButton -->
+        <div class="mobile-menu-container scrollable ">
+            <form action="#" class="input-wrapper">
+                <input type="text" class="form-control text-left" name="search" autocomplete="off"
+                       placeholder="کلمه کلیدی را وارد کنید" required />
+                <button class="btn btn-search" type="submit" title="submit-button">
+                    <i class="d-icon-search"></i>
+                </button>
+            </form>
+            <!-- End of Search Form -->
+            <div class="mobile-menu mmenu-anim tab-content">
+                <div class="tab-pane active" id="tab-11">
+                    <ul>
+                        <li>
+                            <a href="/">صفحه نخست</a>
+                        </li>
+                        <li>
+                            <a href="/product_category">محصولات</a>
+                            <ul>                                      
+                                <li>
+                                    <a href="#"> کفش کوهنوردی </a>
+                                </li>
+                                <li>
+                                    <a href="#"> کتانی سنگنوردی </a>
+                                </li>
+                                <li>
+                                    <a href="#"> لوازم تخصصی </a>
+                                </li>
+                            </ul>
+                        </li>  
+                        <li>
+                            <a href="/agency">نمایندگی ها</a>                                   
+                        </li>
+                        <li>
+                            <a href="/about">درباره ما</a>
+                        </li>
+                        <li>
+                            <a href="/question">سوالات متداول</a>
+                        </li>
+                        <li>
+                            <a href="/contact_us">تماس با ما</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End of MobileMenu -->
+        </div>
+    </div>
+    <!-- newsletter-popup type4 -->
+    <div class="newsletter-popup newsletter-pop4 mfp-hide rtl text-center " id="newsletter-popup">
+        <div class="newsletter-content p-relative y-50">
+            <h4 class="text-uppercase text-white font-weight-bolder">
+                تا <span class="text-primary">
+                    20%
+                    تخفیف
+                </span>
+            </h4>
+            <h2 class="font-weight-bold ls-m text-capitalize text-white mb-2">عضویت در وبسایت</h2>
+            <p class="text-grey mb-6">جزء اولین کسانی باشید که از تخفیف ها و محصولات جدید ما باخبر می شوند.</p>
+            <form action="#" method="get" class="input-wrapper input-wrapper-inline input-wrapper-round mb-5">
+                <input type="email" class="form-control email text-left" name="email" id="email2"
+                       placeholder="ایمیل آدرس را اینجا وارد کنید..." required="">
+                <button class="btn btn-primary text-uppercase" type="submit">ارسال</button>
+            </form>
+            <div class="form-checkbox justify-content-center">
+                <input type="checkbox" class="custom-checkbox" id="hide-newsletter-popup" name="hide-newsletter-popup"
+                       required />
+                <label for="hide-newsletter-popup">این پنجره دیگر نشان داده نشود.</label>
+            </div>
+        </div>
+    </div>
+    <!-- sticky icons-->
+    <!-- <div class="sticky-icons-wrapper  rtl text-right">
+        <div class="sticky-icon-links">
+            <ul>
+                <li><a href="#" class="demo-toggle"><i class="fas fa-home"></i><span>دموها</span></a></li>
+                <li>
+                    <a href="documentation.html"><i class="fas fa-info-circle"></i><span>مستندات</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-star"></i><span> عدد در انبار</span></a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-shopping-cart"></i><span>
+                            خرید
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="demos-list">
+            <div class="demos-overlay"></div>
+            <a class="demos-close" href="#"><i class="close-icon"></i></a>
+            <div class="demos-content scrollable scrollable-light">
+                <h3 class="demos-title">دموها</h3>
+                <div class="demos">
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Plugins JS File -->
+    <script src="{%static 'main_app/'%}vendor/jquery/jquery.min.js"></script>
+    <script src="{%static 'main_app/'%}vendor/jquery.plugin/jquery.plugin.min.js"></script>
+    <script src="{%static 'main_app/'%}vendor/{%static 'main_app/'%}imagesloaded/{%static 'main_app/'%}imagesloaded.pkgd.min.js"></script>
+    <script src="{%static 'main_app/'%}vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="{%static 'main_app/'%}vendor/owl-carousel/owl.carousel.min.js"></script>
+    <script src="{%static 'main_app/'%}vendor/jquery.countdown/jquery.countdown.min.js"></script>
+    <script src="{%static 'main_app/'%}vendor/sticky/sticky.min.js"></script>
+    <script src="{%static 'main_app/'%}vendor/jquery.floating/jquery.floating.min.js"></script>
+    <!-- Main JS File -->
+    <script src="{%static 'main_app/'%}js/main.min.js"></script>
+</body>
+</html>
