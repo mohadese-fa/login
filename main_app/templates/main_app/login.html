@@ -1,4 +1,4 @@
-﻿
+{%load static%}
 <div class="login-popup">
     <div class="form-box rtl">
         <div class="tab tab-nav-simple tab-nav-boxed form-tab">
@@ -12,8 +12,9 @@
                 </li>
             </ul>
             <div class="tab-content">
-                <div class="tab-pane active" id="signin">
+                <div class="tab-pane {% if not user.is_authenticated %}active{% endif %}" id="signin">
                     <form method="post">
+                        {% csrf_token %}
                         <div class="form-group mb-3">
                             <input type="text" class="form-control text-left" id="singin-email" name="singin-email" placeholder="نام کاربری یا آدرس ایمیل" required />
                         </div>
@@ -29,6 +30,7 @@
                             </div>
                             <a href="#" class="lost-link">رمز عبور خود را فراموش کرده اید؟</a>
                         </div>
+                        {{msg}}
                         <button class="btn btn-dark btn-block btn-rounded" type="submit">ورود</button>
                     </form>
                     <div class="form-choice text-center">
@@ -40,8 +42,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane" id="register">
-                    <form method="post" action="{% url 'register' %}">
+                <div class="tab-pane {% if user.is_authenticated %}active{% endif %}" id="register">
+                    <form method="post">
+                        {% csrf_token %}
                         <div class="form-group mb-3">
                             <input type="email" class="form-control text-left" id="register-email" name="register-email" placeholder="آدرس ایمیل"
                                 required />
@@ -72,4 +75,3 @@
         </div>
     </div>
 </div>ثبت 
-  
