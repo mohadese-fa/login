@@ -2,6 +2,10 @@ from django.shortcuts import render,redirect,HttpResponse
 from .forms import *
 from .models import *
 # Create your views here.
+
+def login_page(request):
+    return render(request, 'static/main_app/ajax/login.html')
+
 def index(request):
     stc=staticContentClass.objects.filter(key='home')
     stp=staticPhotoClass.objects.filter(key='home')

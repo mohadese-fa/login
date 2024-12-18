@@ -16,12 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from main_app.views import index,product_category,products,shop,agency,about,contact_us,question,agencyCity
+from main_app.views import index,product_category,products,shop,agency,about,contact_us,question,agencyCity,login_page
 from django.conf import settings
 from django.conf.urls.static import static
+from main_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
+    path('ajax/login/', views.login_page, name='login_page'),
     path('product_category/', product_category),
     path('products/<num>', products),
     path('shop/<num>', shop),
