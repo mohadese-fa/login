@@ -1,32 +1,29 @@
 from django.shortcuts import render,redirect,HttpResponse
 from .forms import *
 from .models import *
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 from django.contrib.auth.models import User
-from django.contrib.auth import logout
 from django.contrib import messages
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from django.middleware.csrf import get_token
+
 # Create your views here.
 
-def login_view(request):
-    return render(request, 'main_app/login.html')
+def login(request):
+    return render(request,'main_app/login.html')
 
-def login_or_register_view(request):
-    if request.method == 'POST':
-        if 'singin-email' in request.POST:  
-            username = request.POST.get['singin-email']
-            password = request.POST.get['singin-password']
-            user = authenticate( username=username, password=password)
-            if user is not None:
-                return redirect("/account/")  
-            else:
-                return render(request,"main_app/login.html",context={'msg': 'نام کاربری یا رمز عبور اشتباه است.'})
 
-        elif 'register-email' in request.POST:  
-            username = request.POST.get['register-email']
-            password = request.POST.get['register-password']
-            User.objects.create_user(username=username ,email=username, password=password, is_staff=False)
-            return redirect("/login/")
-    return render(request,"main_app/login.html")
+# def register(request):
+#     if (request.method=="POST"):
+#         s=""
+#         email=request.POST.get("register-email")
+#         password=request.POST.get("register-password")
+#         User.objects.create_user(username=email,email=email,password=password,is_staff=False)
+#         return render(request,'main_app/login.html')
+#     return render(request,'main_app/login.html')
+        
+
 
 def account(request):
     return render(request,"main_app/account.html")
