@@ -85,6 +85,9 @@
                                 <li>
                                     <a href="/contact_us">تماس با ما</a>
                                 </li>
+                                <li>
+                                    <a href="/register">ثبت نام</a>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -122,7 +125,7 @@
                             </form>
                         </div>
                         <!-- End Header Search -->
-                        <a href="{% url 'login' %}" class="login-link hs-toggle ml-4" title="login">
+                        <a href="{% url 'pop_login' %}" class="login-link hs-toggle ml-4" title="login">
                             <i class="d-icon-user"></i>
                         </a>
                         <div class="dropdown wishlist wishlist-dropdown off-canvas ml-4 d-lg-show">
@@ -285,10 +288,8 @@
                                         <div class="product-navigation">
                                             <ul class="breadcrumb breadcrumb-lg">
                                                 <li><a href="/"><i class="d-icon-home"></i></a></li>
-                                                <li><a href="#" class="active"> 
-                                                {%block 'titleB'%}
+                                                {%block 'titleB'%}                                               
                                                     {%endblock%}
-                                                  </a></li>
                                             </ul>
                                         </div>
                                         </h2>
@@ -475,6 +476,10 @@
             <i class="d-icon-home"></i>
             <span>صفحه نخست</span>
         </a>
+        <a href="/account" class="sticky-link">
+            <i class="d-icon-user"></i>
+            <span>حساب کاربری</span>
+        </a>
         <a href="#" class="sticky-link">
             <i class="d-icon-volume"></i>
             <span>سبد خرید</span>
@@ -482,10 +487,6 @@
         <a href="#" class="sticky-link">
             <i class="d-icon-heart"></i>
             <span>علاقه مندی</span>
-        </a>
-        <a href="#" class="sticky-link">
-            <i class="d-icon-user"></i>
-            <span>حساب کاربری</span>
         </a>
         <div class="header-search hs-toggle dir-up">
             <a href="#" class="search-toggle sticky-link">

@@ -1,0 +1,43 @@
+{%extends 'main_app/layout.html'%}
+{%load static%}
+{%block 'titleA'%}
+ثبت نام
+{%endblock%}
+{%block 'titleB'%}
+<li><a href="/register" class="active">ثبت نام</a></li>
+{%endblock%}
+{%block 'content'%}
+<div class="page-content pt-7">
+    <section class="contact-section appear-animate">
+        <div class="container">
+            <div class="row">
+                <form class="pl-lg-2" method="post" style="margin:auto;max-width: 700px;">
+                {% csrf_token %}
+                    <fieldset style="padding: 50px;">
+                        <legend style="text-align: center; font-size:x-large">ثبت نام</legend>
+                        <div class="form-group mb-2" >
+                            <input type="text" class="form-control text-right" id="first-name" name="first-name" placeholder="نام" required />
+                        </div>
+                        <div class="form-group mb-2" >
+                            <input type="text" class="form-control text-right" id="last-name" name="last-name" placeholder="نام خانوادگی" required />
+                        </div>
+                        <div class="form-group mb-2" >
+                            <input type="email" class="form-control text-left" id="email" name="email" placeholder="آدرس ایمیل" required />
+                        </div>
+                        <div class="form-group mb-2" >
+                            <input type="text" class="form-control text-left" id="username" name="username" placeholder="نام کاربری" required />
+                        </div> 
+                        <div class="form-group mb-2">
+                            <input type="password" class="form-control text-left ltr" id="password" name="password" placeholder="رمز عبور" required />
+                        </div>
+                        <div class="form-group mb-2">
+                            <input type="password" class="form-control text-left ltr" id="confirm-password" name="confirm-password" placeholder="تکرار رمز عبور" required />
+                        </div>
+                        <legend style="text-align: center; font-size:x-large"> 
+                        <button class="btn btn-dark btn-block btn-rounded" type="submit">ثبت نام</button></legend>
+                    </fieldset>    
+                </form>
+            </div> 
+    </section>
+</div>            
+{%endblock%}

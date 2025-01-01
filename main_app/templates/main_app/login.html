@@ -1,125 +1,34 @@
-<div class="login-popup">
-        <div class="form-box rtl">
-            <div class="tab tab-nav-simple tab-nav-boxed form-tab">
-                <ul class="nav nav-tabs nav-fill align-items-center border-no justify-content-center mb-5" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active border-no lh-1 ls-normal" href="#signin">ورود </a>
-                    </li>
-                    <li class="delimiter">یا </li>
-                    <li class="nav-item">
-                        <a class="nav-link border-no lh-1 ls-normal" href="#register"> یا ثبت نام</a>
-                    </li>
-                </ul>
-                <div class="tab-content">
-                    <div class="tab-pane active" id="signin">
-                        <form id="loginForm" method="post">
-                            {% csrf_token %}
-                            <div class="form-group mb-3">
-                                <input type="text" class="form-control text-left" id="singin-email" name="singin-email" placeholder="نام کاربری یا آدرس ایمیل" required />
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control text-left ltr" id="singin-password" name="singin-password" placeholder="رمز عبور" required />
-                            </div>
-                            <div class="form-footer">
-                                <div class="form-checkbox">
-                                    <input type="checkbox" class="custom-checkbox" id="signin-remember" name="signin-remember" />
-                                    <label class="form-control-label" for="signin-remember">مرا به یاد بسپار</label>
-                                </div>
-                                <a href="#" class="lost-link">رمز عبور خود را فراموش کرده اید؟</a>
-                            </div>
-                            <button class="btn btn-dark btn-block btn-rounded" type="submit">ورود</button>
-                            <div id="loginMessage" class="alert" style="display:none;"></div> <!-- قسمت نمایش پیام -->
-                        </form>
-                        <div class="form-choice text-center">
-                            <label class="ls-m">یا ورود با</label>
-                            <div class="social-links">
-                                <a href="#" class="social-link social-google fab fa-google border-no"></a>
-                                <a href="#" class="social-link social-facebook fab fa-facebook-f border-no"></a>
-                                <a href="#" class="social-link social-twitter fab fa-twitter border-no"></a>
-                            </div>
+{%extends 'main_app/layout.html'%}
+{%load static%}
+{%block 'titleA'%}
+ورود
+{%endblock%}
+{%block 'titleB'%}
+<li><a href="/login" class="active">ورود</a></li>
+{%endblock%}
+{%block 'content'%}
+<div class="page-content pt-7">
+    <section class="contact-section appear-animate">
+        <div class="container">
+            <div class="row">
+                <form class="pl-lg-2" method="post" style="max-width: 700px; margin:auto">
+                {% csrf_token %}
+                {{msg}}
+                    <fieldset style="padding: 50px;">
+                        <legend style="text-align: center; font-size:x-large">ورود</legend>
+                        <div class="form-group mb-2" >
+                            <input type="text" class="form-control text-left" id="username" name="username" placeholder="نام کاربری" required />
+                        </div> 
+                        <div class="form-group mb-2">
+                            <input type="password" class="form-control text-left ltr" id="password" name="password" placeholder="رمز عبور" required />
                         </div>
-                    </div>
-                    <div class="tab-pane" id="register">
-                        <form id="registerForm" method="post">
-                            {% csrf_token %}
-                            <div class="form-group mb-3">
-                                <input type="email" class="form-control text-left" id="register-email" name="register-email" placeholder="آدرس ایمیل" required />
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control text-left ltr" id="register-password" name="register-password" placeholder="رمز عبور" required />
-                            </div>
-                            <div class="form-footer">
-                                <div class="form-checkbox">
-                                    <input type="checkbox" class="custom-checkbox" id="register-agree" name="register-agree" required />
-                                    <label class="form-control-label" for="register-agree">اطلاعات کاربری من محفوظ بماند.</label>
-                                </div>
-                            </div>
-                            <button class="btn btn-dark btn-block btn-rounded" type="submit">ثبت نام</button>
-                            <div id="registerMessage" class="alert" style="display:none;"></div> <!-- قسمت نمایش پیام -->
-                        </form>
-                        <div class="form-choice text-center">
-                            <label class="ls-m">یا ثبت نام با</label>
-                            <div class="social-links">
-                                <a href="#" class="social-link social-google fab fa-google border-no"></a>
-                                <a href="#" class="social-link social-facebook fab fa-facebook-f border-no"></a>
-                                <a href="#" class="social-link social-twitter fab fa-twitter border-no"></a>
-                            </div>
+                        <button class="btn btn-dark btn-block btn-rounded mb-2" type="submit" >ورود</button>
+                        <div class="form-footer mb-2">
+                            <a href="#" class="lost-link">رمز عبور خود را فراموش کرده اید؟</a>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-</div>
-<!-- <script>
-    $(document).ready(function() {
-        function getCsrfToken() {
-            return $.ajax({
-                url: '/csrf-token/',
-                type: 'GET',
-                dataType: 'json'
-            });
-        }
-    
-        $('#loginForm').on('submit', function(event) {
-            event.preventDefault();  // جلوگیری از ارسال فرم به روش معمول
-    
-            getCsrfToken().done(function(data) {
-                $.ajax({
-                    type: 'POST',
-                    url: '/login/',
-                    data: $('#loginForm').serialize(),
-                    headers: {
-                        'X-CSRFToken': data.csrfToken
-                    },
-                    success: function(response) {
-                        $('#loginMessage').removeClass('alert-danger').addClass('alert-success').text(response.message).show();
-                    },
-                    error: function(xhr, status, error) {
-                        $('#loginMessage').removeClass('alert-success').addClass('alert-danger').text('مشکلی پیش آمد، دوباره تلاش کنید.').show();
-                    }
-                });
-            });
-        });
-    
-        $('#registerForm').on('submit', function(event) {
-            event.preventDefault();  // جلوگیری از ارسال فرم به روش معمول
-    
-            getCsrfToken().done(function(data) {
-                $.ajax({
-                    type: 'POST',
-                    url: '/register/',
-                    data: $('#registerForm').serialize(),
-                    headers: {
-                        'X-CSRFToken': data.csrfToken
-                    },
-                    success: function(response) {
-                        $('#registerMessage').removeClass('alert-danger').addClass('alert-success').text(response.message).show();
-                    },
-                    error: function(xhr, status, error) {
-                        $('#registerMessage').removeClass('alert-success').addClass('alert-danger').text('مشکلی پیش آمد، دوباره تلاش کنید.').show();
-                    }
-                });
-            });
-        });
-    });
-</script> -->
+                    </fieldset>
+                </form>
+            </div> 
+    </section>
+</div>            
+{%endblock%}

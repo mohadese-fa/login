@@ -1,5 +1,6 @@
 from django.db import models
 from ckeditor.fields import RichTextField
+from django.contrib.auth.models import AbstractUser
 # Create your models here.
 
 class contactClass(models.Model):
@@ -29,6 +30,10 @@ class staticPhotoClass(models.Model):
 class productClass(models.Model):
     name=models.CharField(max_length=100)
     description=RichTextField(null=True)
+    designTab=RichTextField(null=True)
+    PropertyTab=RichTextField(null=True)
+    additionalPropertyTab=RichTextField(null=True)
+    benefitsTab=RichTextField(null=True)
     def __str__(self) -> str:
         return self.name
 
@@ -36,9 +41,9 @@ class productClass(models.Model):
 class productImagesClass(models.Model):
     name=models.CharField(max_length=100)
     photo1=models.ImageField(upload_to="images/products")
-    photo2=models.ImageField(upload_to="images/products")
-    photo3=models.ImageField(upload_to="images/products")
-    photo4=models.ImageField(upload_to="images/products")
+    photo2=models.ImageField(upload_to="images/products",blank=True)
+    photo3=models.ImageField(upload_to="images/products",blank=True)
+    photo4=models.ImageField(upload_to="images/products",blank=True)
     photo5=models.ImageField(upload_to="images/products",blank=True)
     photo6=models.ImageField(upload_to="images/products",blank=True)
     photo7=models.ImageField(upload_to="images/products",blank=True)
@@ -71,7 +76,6 @@ class brandClass(models.Model):
 class colorClass(models.Model):
     name=models.CharField(max_length=50)
     hex_code=models.CharField(max_length=7,blank=True,null=True)
-    photo=models.ImageField(upload_to="images",null=True)
     def __str__(self) -> str:
         return self.name
     
@@ -80,7 +84,7 @@ class sizeClass(models.Model):
     name=models.CharField(max_length=20)
     def __str__(self) -> str:
         return self.name
-
+    
 
 class productVariantClass(models.Model):
     product=models.ForeignKey(productClass,on_delete=models.CASCADE,related_name="products")
@@ -89,7 +93,7 @@ class productVariantClass(models.Model):
     category=models.ForeignKey(categoryClass,on_delete=models.CASCADE,related_name="categories",null=True)
     brand=models.ForeignKey(brandClass,on_delete=models.CASCADE,related_name="brands",null=True)
     color=models.ForeignKey(colorClass,on_delete=models.CASCADE,related_name="colors")
-    size=models.ForeignKey(sizeClass,on_delete=models.CASCADE,related_name="sizes")
+    size=models.ForeignKey(sizeClass,on_delete=models.CASCADE,related_name="sizes",null=True)
     price=models.DecimalField(max_digits=10,decimal_places=2)
     stock=models.PositiveIntegerField(default=0)
     def __str__(self) -> str:
@@ -143,4 +147,8 @@ class questionDClass(models.Model):
     description=RichTextField()
     def __str__(self) -> str:
         return self.title    
-            
+
+
+roleitems=(("seller","فروشنده"),("customer","مشتری"))
+class CustomUserClass(AbstractUser):
+    role=models.CharField(max_length=20,choices=roleitems,default="customer")            

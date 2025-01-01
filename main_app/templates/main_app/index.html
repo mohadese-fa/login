@@ -86,6 +86,9 @@
                                 <li>
                                     <a href="/contact_us">تماس با ما</a>
                                 </li>
+                                <li>
+                                    <a href="/register">ثبت نام</a>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -123,7 +126,7 @@
                             </form>
                         </div>
                         <!-- End Header Search -->
-                        <a href="{% url 'login' %}" class="login-link hs-toggle ml-4" title="login">
+                        <a href="{% url 'pop_login' %}" class="login-link hs-toggle ml-4" title="login">
                             <i class="d-icon-user"></i>
                         </a>
                        
@@ -314,7 +317,7 @@
                                         data-animation-options="{'name': 'fadeInUpShorter', 'duration': '1s', 'delay': '1.4s'}">
                                         {{cnt.3.text | safe}}
                                     </h3>
-                                    <a href="market3-shop.html"
+                                    <a href="/products/4"
                                        class="btn btn-dark btn-rounded slide-animate ls-normal mb-2 text-uppercase"
                                        data-animation-options="{'name': 'fadeInUpShorter', 'duration': '1s', 'delay': '1.8s'}">
                                         مشاهده و انتخاب<i class="d-icon-arrow-left"></i>
@@ -346,7 +349,7 @@
                                         data-animation-options="{'name': 'fadeInUpShorter', 'duration': '1s', 'delay': '1.4s'}">
                                         {{cnt.1.text | safe}}  
                                     </h2>
-                                    <a href="market3-shop.html"
+                                    <a href="/products/3"
                                        class="btn btn-dark btn-rounded slide-animate ls-normal mb-2 text-uppercase"
                                        data-animation-options="{'name': 'fadeInUpShorter', 'duration': '1s', 'delay': '1.8s'}">
                                         مشاهده و انتخاب<i class="d-icon-arrow-left"></i>
@@ -377,7 +380,7 @@
                                         data-animation-options="{'name': 'fadeInUpShorter', 'duration': '1s', 'delay': '1.4s'}">
                                         {{cnt.5.text | safe}}  
                                     </h2>
-                                    <a href="market3-shop.html"
+                                    <a href="/products/5"
                                        class="btn btn-dark btn-rounded slide-animate ls-normal mb-2 text-uppercase"
                                        data-animation-options="{'name': 'fadeInUpShorter', 'duration': '1s', 'delay': '1.8s'}">
                                         مشاهده و انتخاب<i class="d-icon-arrow-left"></i>
@@ -525,7 +528,7 @@
                                                     <h6 class="text-black mb-6" style="margin-top: -30px;">                                    
                                                         {{cnt.7.text | safe}}  
                                                     </h6>
-                                                    <a href="demo32-shop.html"
+                                                    <a href="/product_category"
                                                         class="btn btn-dark btn-ellipse btn-icon-right mb-1">مشاهده و انتخاب<i
                                                            class="d-icon-arrow-left"></i></a>
                                                 </div>
@@ -574,49 +577,49 @@
                                         }
                                     }">
                                         <div class="category category-absolute category-classic ">
-                                            <a href="demo9-shop.html">
+                                            <a href="/products/4">
                                                 <figure class="category-media">
-                                                    <img src="{%static 'main_app/'%}images/index/1l.jpeg" alt="Cateogry" width="280"
+                                                    <img src="{{img.21.photo.url}}" alt="Cateogry" width="280"
                                                          height="280" />
                                                 </figure>
                                                 <div class="category-content rtl">
-                                                    <h4 class="category-name"> کفش کوهنوردی FITWELL </h4>
+                                                    <h4 class="category-name"> {{img.21.title}} </h4>
                                                     <span class="category-count">20 محصول</span>
                                                 </div>
                                             </a>
                                         </div>
                                         <div class="category category-absolute category-classic">
-                                            <a href="demo9-shop.html">
+                                            <a href="/products/3">
                                                 <figure class="category-media">
-                                                    <img src="{%static 'main_app/'%}images/index/2l.jpeg" alt="Cateogry" width="280"
+                                                    <img src="{{img.22.photo.url}}" alt="Cateogry" width="280"
                                                          height="280" />
                                                 </figure>
                                                 <div class="category-content rtl">
-                                                    <h4 class="category-name"> کتانی سنگنوردی EVOLV </h4>
+                                                    <h4 class="category-name">{{img.22.title}}</h4>
                                                     <span class="category-count">30 محصولات</span>
                                                 </div>
                                             </a>
                                         </div>
                                         <div class="category category-absolute category-classic">
-                                            <a href="demo9-shop.html">
+                                            <a href="/products/5">
                                                 <figure class="category-media">
-                                                    <img src="{%static 'main_app/'%}images/index/3l.jpeg" alt="Cateogry" width="280"
+                                                    <img src="{{img.23.photo.url}}" alt="Cateogry" width="280"
                                                          height="280" />
                                                 </figure>
                                                 <div class="category-content rtl">
-                                                    <h4 class="category-name"> طناب BLUEWATER </h4>
+                                                    <h4 class="category-name">{{img.23.title}}</h4>
                                                     <span class="category-count">10 محصولات</span>
                                                 </div>
                                             </a>
                                         </div>
                                         <div class="category category-absolute category-classic">
-                                            <a href="demo9-shop.html">
+                                            <a href="/products/5">
                                                 <figure class="category-media">
-                                                    <img src="{%static 'main_app/'%}images/index/4l.jpeg" alt="Cateogry" width="280"
+                                                    <img src="{{img.24.photo.url}}" alt="Cateogry" width="280"
                                                          height="280" />
                                                 </figure>
                                                 <div class="category-content rtl">
-                                                    <h4 class="category-name"> باتوم MASTERS </h4>
+                                                    <h4 class="category-name">{{img.24.title}}</h4>
                                                     <span class="category-count">7 محصولات</span>
                                                 </div>
                                             </a>
@@ -1541,6 +1544,10 @@
             <i class="d-icon-home"></i>
             <span>صفحه نخست</span>
         </a>
+        <a href="/account" class="sticky-link">
+            <i class="d-icon-user"></i>
+            <span>حساب کاربری</span>
+        </a>
         <a href="#" class="sticky-link">
             <i class="d-icon-volume"></i>
             <span>سبد خرید</span>
@@ -1548,10 +1555,6 @@
         <a href="#" class="sticky-link">
             <i class="d-icon-heart"></i>
             <span>علاقه مندی</span>
-        </a>
-        <a href="#" class="sticky-link">
-            <i class="d-icon-user"></i>
-            <span>حساب کاربری</span>
         </a>
         <div class="header-search hs-toggle dir-up">
             <a href="#" class="search-toggle sticky-link">

@@ -4,13 +4,12 @@
 حساب کاربری
 {%endblock%}
 {%block 'titleB'%}
-حساب کاربری
+<li><a href="/account" class="active">حساب کاربری</a></li>
 {%endblock%}
 {%block 'content'%}
 <main class="main account rtl text-right">
     <div class="page-content mt-4 mb-10 pb-6 appear-animate">
         <div class="container">
-            <h2 class="title title-center mb-10">حساب کاربری</h2>
             <div class="tab tab-vertical gutter-lg">
                 <ul class="nav nav-tabs mb-4 col-lg-3 col-md-4" role="tablist">
                     <li class="nav-item">
@@ -29,15 +28,13 @@
                         <a class="nav-link text-right " href="#address">آدرس</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-right" href="login.html">خروج</a>
+                        <a class="text-right" href="/logout/" style="font-size: 1.6rem;">خروج</a>
                     </li>
                 </ul>
                 <div class="tab-content col-lg-9 col-md-8">
                     <div class="tab-pane active" id="dashboard">
                         <p class="mb-0">
-                            سلام  <span>مشتری عزیز</span> (یا  <span>کاربر مهمان گرامی</span> / <a href="#" class="text-primary">
-                                خروج
-                            </a>)
+                            <h6 style="color: #666666;"> سلام  <span>{{user.first_name}}&nbsp;{{user.last_name}} عزیز</span> </h6>
                         </p>
                         <p class="mb-8">
                             از داشبورد حساب خود می توانید سفارشات اخیر خود را مشاهده کنید.
@@ -69,27 +66,26 @@
                                 در بخش حساب و در بررسی
                             </small>
                             <label>ایمیل</label>
-                            <input type="email" class="form-control text-left" name="email" required="" placeholder="ایمیل">
+                            <input type="email" class="form-control text-left" name="email" required="">
                             <label>رمز عبور</label>
                             <input type="password" class="form-control text-left ltr" name="current_password">
                             <label>تکرار رمز عبور</label>
                             <input type="password" class="form-control text-left ltr" name="confirm_password">
-                            <button type="submit" class="btn btn-primary">ذخیره تغییرات</button>
+                            <button type="submit" class="btn btn-dark">ذخیره تغییرات</button>
                         </form>
                     </div>
                     <div class="tab-pane" id="change_pass">
                         <form action="#" class="form">
-                            <div class="row">
-                            <fieldset>
-                                <legend>تغییر پسورد</legend>
-                                <label>رمز عبور فعلی (خالی بگذارید تا بدون تغییر باقی بماند)</label>
-                                <input type="password" class="form-control text-left ltr" name="current_password">
-                                <label>رمز عبور جدید (خالی بگذارید تا بدون تغییر باقی بماند)</label>
-                                <input type="password" class="form-control text-left ltr" name="new_password">
-                                <label>رمز عبور جدید را تایید کنید</label>
-                                <input type="password" class="form-control text-left ltr" name="confirm_password">
-                            </fieldset>
-                            <button type="submit" class="btn btn-primary">ذخیره تغییرات</button>
+                                <fieldset style="margin-top: 0px;">
+                                        <legend>تغییر پسورد</legend>
+                                        <label>رمز عبور فعلی (خالی بگذارید تا بدون تغییر باقی بماند)</label>
+                                        <input type="password" class="form-control text-left ltr" name="current_password">
+                                        <label>رمز عبور جدید (خالی بگذارید تا بدون تغییر باقی بماند)</label>
+                                        <input type="password" class="form-control text-left ltr" name="new_password">
+                                        <label>رمز عبور جدید را تایید کنید</label>
+                                        <input type="password" class="form-control text-left ltr" name="confirm_password">
+                                </fieldset>
+                                <button type="submit" class="btn btn-dark">ذخیره تغییرات</button>      
                         </form>
                     </div>
                     <div class="tab-pane" id="orders">

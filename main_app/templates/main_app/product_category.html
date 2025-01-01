@@ -4,7 +4,7 @@
 دسته بندی محصــولات
 {%endblock%}
 {%block 'titleB'%}
-دسته بندی محصــولات
+<li><a href="/product_category" class="active">دسته بندی محصــولات</a></li>
 {%endblock%}
 {%block 'content'%}
 <main class="main home mt-lg-1 mt-mb-10 pb-7 rtl text-right">
@@ -64,14 +64,14 @@
                             {%for itm in i.categories.all%}
                             <div class="product product-classic">
                                 <figure class="product-media">
-                                    <a href="demo11-product.html">
+                                    <a href="/shop/{{itm.id}}">
                                         <img src="{{itm.photo.url}}" alt="product" width="300"
                                              height="338">
                                     </a>
                                 </figure>
                                 <div class="product-details rtl">
                                     <h3 class="product-name">
-                                        <a href="demo11-product.html">{{itm.product}}</a>
+                                        <a href="/shop/{{itm.id}}">{{itm.product}}</a>
                                     </h3>
                                     <div class="product-price">
                                         <span class="price">{{itm.price}}</span>
@@ -81,7 +81,7 @@
                                             <span class="ratings" style="width:100%"></span>
                                             <span class="tooltiptext tooltip-top"></span>
                                         </div>
-                                        <a href="demo11-product.html" class="rating-reviews">( از 16نظر )</a>
+                                        <a href="/shop/{{itm.id}}" class="rating-reviews">( از 16نظر )</a>
                                     </div>
                                     <div class="product-action">
                                         <a href="#" class="btn-product btn-cart" data-toggle="modal"

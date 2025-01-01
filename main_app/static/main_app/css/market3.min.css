@@ -12341,11 +12341,11 @@ aside + div .product-single .product-details {
         }
 
     .tab-vertical .tab-pane {
-        padding: 1.7rem 2rem
+        padding: 1.7rem 2rem;
     }
 
     .tab-vertical.tab-simple .nav-link {
-        margin-left: -2px
+        margin-left: -2px;
     }
 
         .tab-vertical.tab-simple .nav-link:after {
@@ -12359,7 +12359,7 @@ aside + div .product-single .product-details {
             transform: translateY(-50%) scale(0);
             background-color: transparent;
             transition: transform 0.3s;
-            z-index: 1
+            z-index: 1;
         }
 
     .tab-vertical.tab-simple .nav-item .nav-link.active, .tab-vertical.tab-simple .nav-item.show .nav-link, .tab-vertical.tab-simple .nav-item:hover .nav-link {
@@ -19222,3 +19222,160 @@ display: flow !important;
         font-size: 1.8rem
     }
 } 
+
+/* account */
+.account {
+    line-height: 2.15;
+}
+
+    .account .title {
+        font-size: 3rem;
+        letter-spacing: -0.035em;
+    }
+
+    .account p {
+        font-family: vazir;
+        line-height: 2.15;
+        letter-spacing: -0.017em;
+    }
+
+        .account p span {
+            color: #333;
+        }
+
+        .account p:first-child {
+            letter-spacing: -0.000 5em;
+        }
+
+        .account p .link-to-tab {
+            text-decoration: underline;
+        }
+
+    .account #dashboard p {
+        color: #777;
+    }
+
+    .account .btn.btn-dark {
+        padding: 0.93em 1.97em;
+    }
+
+    .account label {
+        display: block;
+        padding-right: 0.2rem;
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+        line-height: 1;
+    }
+
+    .account .form-control {
+        font-size: 1.3rem;
+        font-family: vazir;
+        transition: background-color 0.3s, border-color 0.3s;
+        color: #999;
+        border-radius: 0.3rem;
+    }
+
+        .account .form-control:focus {
+            border-color: #222;
+        }
+
+    .account .nav-tabs {
+        width: auto;
+        border-left: none;
+    }
+
+    .account .nav-item {
+        border-bottom: 1px solid #eee;
+        color: #222;
+    }
+
+        .account .nav-item a {
+            display: block;
+            padding: 1.7rem 0.8rem 1.6rem;
+            margin: 0;
+            font-weight: 600;
+            letter-spacing: -0.015em;
+            line-height: 1;
+            text-transform: none;
+        }
+
+        .account .nav-item:hover .nav-link {
+            color: #fe7c00;
+        }
+
+        .account .nav-item .nav-link.active,
+        .account .nav-item.show .nav-link {
+            color: #fe7c00;
+        }
+
+    .account .tab-pane {
+        padding: 0.8rem 0 0;
+    }
+
+    .account thead {
+        text-align: left;
+    }
+
+        .account thead th {
+            padding: 1.5rem 0;
+            background-color: #f4f4f4;
+            text-align: right;
+        }
+
+    .account tbody td {
+        padding: 1.5rem 0 1.5rem 1rem;
+    }
+
+    .account tbody tr:nth-child(2n) td {
+        background-color: #f4f4f4;
+    }
+
+    .account td:first-child {
+        padding-right: 1rem;
+    }
+
+    .account .order-total {
+        width: 25.9rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: #666;
+    }
+
+    .account fieldset {
+        margin: 7rem 0 2rem;
+        padding: 2rem 2rem 1rem;
+        border: 1px solid #e1e1e1;
+    }
+
+    .account legend {
+        color: #222;
+    }
+
+    .account .btn {
+        padding: 1em 1.87em;
+    }
+
+    .account .order-table {
+        border: 1px solid #eee;
+    }
+
+    .account .order-action .btn {
+        padding: 0;
+    }
+
+    @media (max-width: 767px) {
+    .account .nav-tabs {
+        width: 100%;
+    }
+
+    .account .tab-content {
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 479px) {
+    .account .order-action,
+    .account thead th:last-child {
+        display: none;
+    }
+}

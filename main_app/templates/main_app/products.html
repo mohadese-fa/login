@@ -4,10 +4,13 @@
  محصــولات
 {%endblock%}
 {%block 'titleB'%}
-محصــولات
+{% if pc %}
+<li><a href="/product_category" class="active">دسته بندی محصــولات</a></li>
+<li><a href=" " class="active">{{pc.0.category.name}}</a></li>
+{%endif%}
 {%endblock%}
 {%block 'content'%}
-    <div class="page-content mb-10 pt-7">
+    <div class="page-content mb-10 pt-7 appear-animate">
         <div class="container">
             <div class="row main-content-wrap gutter-lg rtl">
                 <div class="toolbox-wrap">

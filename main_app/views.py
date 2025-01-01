@@ -1,32 +1,49 @@
-from django.shortcuts import render,redirect,HttpResponse
+from django.shortcuts import render,redirect,HttpResponse, get_object_or_404
 from .forms import *
 from .models import *
-from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
-from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login as li , logout as lo
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
-from django.middleware.csrf import get_token
 
 # Create your views here.
 
-def login(request):
-    return render(request,'main_app/login.html')
+def pop_login(request):
+    return render(request,'main_app/pop_login.html')
 
-
-# def register(request):
-#     if (request.method=="POST"):
-#         s=""
-#         email=request.POST.get("register-email")
-#         password=request.POST.get("register-password")
-#         User.objects.create_user(username=email,email=email,password=password,is_staff=False)
-#         return render(request,'main_app/login.html')
-#     return render(request,'main_app/login.html')
-        
-
-
+@login_required
 def account(request):
     return render(request,"main_app/account.html")
+
+def logout(request):
+    lo(request)
+    return redirect("/login/")
+
+def login(request):
+    if (request.method=="POST"):
+        username=request.POST.get("username")
+        password=request.POST.get("password")  
+        u=authenticate(username=username,password=password)  
+        if u is not None:
+            li(request,u)
+            if(u.role=="customer"):
+                return redirect("/account/")
+            else:
+                return redirect("/admin/")
+        else:
+            return render(request,"main_app/login.html",context={"msg":"رمز یا نام کاربری اشتباه است"})
+    else:
+            return render(request,"main_app/login.html")
+
+def register(request):
+    if (request.method=="POST"):
+        firstname=request.POST.get("first-name")
+        lastname=request.POST.get("last-name")
+        email=request.POST.get("email")
+        username=request.POST.get("username")
+        password=request.POST.get("password")
+        CustomUserClass.objects.create_user(username,email,password,first_name=firstname,last_name=lastname,is_staff=False)
+        return redirect("/login/")    
+    return render(request,"main_app/register.html")
 
 def index(request):
     stc=staticContentClass.objects.filter(key='home')
@@ -42,8 +59,11 @@ def products(request,num):
     return render(request,"main_app/products.html",context={"pc":pc})
 
 def shop(request,num):
-    pv=productVariantClass.objects.filter(id=num)
-    return render(request,"main_app/shop.html",context={"pv":pv})
+    pv = productVariantClass.objects.filter(id=num)
+    sizes = list({variant.size.name for variant in pv}) 
+    colors = list({variant.color for variant in pv})
+        
+    return render(request,"main_app/shop.html",context={"pv":pv,"sizes":sizes,"colors": colors})
 
 def agency(request):
     ag=agencyClass.objects.all()

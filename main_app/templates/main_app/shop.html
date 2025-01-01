@@ -4,10 +4,14 @@
  محصــولات
 {%endblock%}
 {%block 'titleB'%}
-محصــولات
+{% for itm in pv %}
+<li><a href="/product_category" class="active">دسته بندی محصــولات</a></li>
+<li><a href="/products/{{itm.category.id}}" class="active">{{itm.category.name}}</a></li>
+<li><a href="" class="active">{{itm.product.name}}</a></li>
+{%endfor%}
 {%endblock%}
 {%block 'content'%}
-{%for itm in pv%}
+{% for itm in pv %}
 <main class="main mt-lg-6 single-product rtl text-right">
     <div class="page-content single-product mb-10 pb-4">
         <div class="container">
@@ -130,18 +134,10 @@
         </div>
         <div class="col-md-6">
             <div class="product-details rtl">
-                <div class="product-navigation">
-                    <ul class="breadcrumb breadcrumb-lg">
-                        <li><a href="demo9.html"><i class="d-icon-home"></i></a></li>
-                        <li><a href="#" class="active">محصولات</a></li>
-                        <li><a href="#" class="active"> کتانی سنگنوردی </a></li>
-                        <li><a href="#" class="active">(Yosemite Bum Low Volume)</a></li>
-                    </ul>
-                </div>
                 <h1 class="product-name">{{itm.product}}</h1>
                 <div class="product-meta">
-                    دسته بندی :<span class="product-sku">{{i.category}}</span>
-                    برند:<span class="product-brand">{{i.brand}}</span>
+                    دسته بندی :<span class="product-sku">{{itm.category}}</span>
+                    برند:<span class="product-brand">{{itm.brand}}</span>
                 </div>
                 <div class="product-price">{{itm.price}}</div>
                 <div class="ratings-container">
@@ -152,37 +148,24 @@
                     <a href="#product-tab-reviews" class="link-to-tab rating-reviews">( از 16نظر )</a>
                 </div>
                 <p class="product-short-desc">
-                    مدل Yosemite Bum Low Volume  بر اساس منحنی با اندکی عدم تقارن طراحی شده است
-                     تا بر روی گیره های نامناسب و کوچک کنترل خوبی ایجاد کند. 
-                     کفشی قوی که محکم بودن را فدای راحتی نمی کند. 
-                     سیستم بسته شدن تسمه های سه گانه و نوار تعبیه شده 
-                     در آن که با کاهش فشار جانبی ،گیره گرفتن با پنجه پا را 
-                     در این کفش به نهایت امنیت رسانده و راحتی و کارایی را برای صعود کننده به همراه دارد.                                                   
+                    {{itm.product.description | safe}}                                 
                 </p>
                 <div class="product-form product-color">
                     <label>رنگ:</label>
                     <div class="product-variations">
-                        <a class="color" data-src="{%static 'main_app/'%}images/demos/demo7/products/big1.jpg" href="#"
-                           style="background-color: #d99e76"></a>
-                        <a class="color" data-src="{%static 'main_app/'%}images/demos/demo7/products/2.jpg" href="#"
-                           style="background-color: #267497"></a>
-                        <a class="color" data-src="{%static 'main_app/'%}images/demos/demo7/products/3.jpg" href="#"
-                           style="background-color: #9a999d"></a>
-                        <a class="color" data-src="{%static 'main_app/'%}images/demos/demo7/products/4.jpg" href="#"
-                           style="background-color: #2b2b2b"></a>
+                        {% for color in colors %}
+                        <a class="color" href="#"
+                           style="background-color: {{ color.hex_code }}"></a>
+                        {% endfor %}
                     </div>
                 </div>
                 <div class="product-form product-size">
                     <label>سایز:</label>
                     <div class="product-form-group">
                         <div class="product-variations">
-                            <a class="size" href="#">36</a>
-                            <a class="size" href="#">37</a>
-                            <a class="size" href="#">38</a>
-                            <a class="size" href="#">39</a>
-                            <a class="size" href="#">40</a>
-                            <a class="size" href="#">41</a>
-                            <a class="size" href="#">42</a>
+                            {% for size in sizes %}
+                            <a class="size" href="#">{{ size }}</a>
+                            {% endfor %}
                         </div>
                         <a href="#" class="product-variation-clean">پاک کردن همه</a>
                     </div>
@@ -231,72 +214,58 @@
     <div class="tab tab-nav-simple product-tabs">
         <ul class="nav nav-tabs justify-content-center" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" href="#product-tab-description">توضیحات</a>
+                <a class="nav-link active" href="#product-tab-Design-and-structure">طراحی و ساختار</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#product-tab-additional">اطلاعات بیشتر</a>
+                <a class="nav-link" href="#product-tab-additional-property">ویژگی های فنی</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#product-tab-size-guide"> راهنمای اندازه</a>
+                <a class="nav-link" href="#product-tab-benefits">مزایا</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#product-tab-reviews"> نظر (2)</a>
             </li>
         </ul>
         <div class="tab-content">
-            <div class="tab-pane active in" id="product-tab-description">
+            <div class="tab-pane active in" id="product-tab-Design-and-structure">
                 <div class="row mt-6">
                     <div class="col-md-6">
                         <h5 class="description-title mb-4 font-weight-semi-bold ls-m">
-                            امکانات
+                              طراحی و ساختار
+                        </h5>
+                        <p class="mb-2">{{itm.product.designTab | safe}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="product-tab-additional-property">
+                <div class="row mt-6">
+                    <div class="col-md-6">
+                        <h5 class="description-title mb-4 font-weight-semi-bold ls-m">
+                            ویژگی های فنی
                         </h5>
                         <p class="mb-2">
-                            احساس کیفیت و زیباییشون شما رو به خودشون جلب می‌کنه. همیشه در کنارتون هستیم تا تجربه خریدتون رو به یه شگفتی تبدیل کنیم. با ما، خرید لحظه‌هایی پر از اشتیاق و خوشحالی رو به شما هدیه می‌دهد.
+                            {{itm.product.PropertyTab | safe}}
                         </p>
-                        <ul class="mb-8">
-                            <li> امکانات کامل، کیفیت بالا، و سادگی در استفاده</li>
-                            <li>منحصر به فرد برای تجربه بی‌نظیر</li>
-                            <li>تنوع در رنگ، یکپارچگی در عملکرد</li>
-                            <li> امکانات گسترده برای همه نیازهای شما در یک محصول</li>
-                        </ul>
+                    </div>
+                    <div class="col-md-6 pl-md-6">   
                         <h5 class="description-title mb-3 font-weight-semi-bold ls-m">
-                            مشخصات فنی
+                             ویژگی های اضافی
                         </h5>
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <th class="font-weight-semi-bold text-dark pl-0">
-                                        مواد :
-                                    </th>
-                                    <td class="pl-4"> بیشترین کیفیت، با مواد بهینه شده و قابل بازیابی </td>
-                                </tr>
-                                <tr>
-                                    <th class="font-weight-semi-bold text-dark pl-0">سایز :</th>
-                                    <td class="pl-4"> بزرگ ، متوسط ، کوچک</td>
-                                </tr>
-                                <tr>
-                                    <th class="font-weight-semi-bold text-dark pl-0">توصیه شده :</th>
-                                    <td class="pl-4"> تجربه‌ای بی‌نظیر در انتظار شماست</td>
-                                </tr>
-                                <tr>
-                                    <th class="font-weight-semi-bold text-dark border-no pl-0">سازنده :</th>
-                                    <td class="border-no pl-4">گروه صنعتی نوین</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <p class="mb-2">
+                            {{itm.product.additionalPropertyTab | safe}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane " id="product-tab-benefits">
+                <div class="row mt-6">
+                    <div class="col-md-6">
+                        <h5 class="description-title mb-4 font-weight-semi-bold ls-m">
+                              مزایا
+                        </h5>
+                      <p class="mb-2">{{itm.product.benefitsTab | safe}}</p>
                     </div>
                     <div class="col-md-6 pl-md-6">
-                        <h5 class="description-title font-weight-semi-bold ls-m mb-5">
-                            ویدئو
-                            توضیحات
-                        </h5>
-                        <figure class="p-relative d-inline-block mb-3">
-                            <img src="{%static 'main_app/'%}images/product/product.jpg" width="559" height="370"
-                                 alt="Product" />
-                            <a class="btn-play btn-iframe" href="{%static 'main_app/'%}video/memory-of-a-woman.mp4">
-                                <i class="d-icon-play-solid"></i>
-                            </a>
-                        </figure>
                         <div class="icon-box-wrap d-flex flex-wrap">
                             <div class="icon-box icon-box-side icon-border pt-2 pb-2 mb-4 ml-10">
                                 <div class="icon-box-icon">
@@ -324,78 +293,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="tab-pane" id="product-tab-additional">
-                <ul class="list-none">
-                    <li>
-                        <label>برند:</label>
-                        <p>گروه صنعتی نوین</p>
-                    </li>
-                    <li>
-                        <label>رنگ:</label>
-                        <p>مشکی ، سفید ، آبی </p>
-                    </li>
-                    <li>
-                        <label>سایز:</label>
-                        <p>بزرگ, متوسط, کوچک</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="tab-pane " id="product-tab-size-guide">
-                <figure class="size-image mt-4 mb-4">
-                    <img src="{%static 'main_app/'%}images/product/size_guide.png" alt="Size Guide Image" width="217"
-                         height="398">
-                </figure>
-                <figure class="size-table mt-4 mb-4">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>سایز</th>
-                                <th>دور سینه</th>
-                                <th>عرض شانه</th>
-                                <th>دور کمر</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th>XS</th>
-                                <td>34-36</td>
-                                <td>27-29</td>
-                                <td>34.5-36.5</td>
-                            </tr>
-                            <tr>
-                                <th>S</th>
-                                <td>36-38</td>
-                                <td>29-31</td>
-                                <td>36.5-38.5</td>
-                            </tr>
-                            <tr>
-                                <th>M</th>
-                                <td>38-40</td>
-                                <td>31-33</td>
-                                <td>38.5-40.5</td>
-                            </tr>
-                            <tr>
-                                <th>L</th>
-                                <td>40-42</td>
-                                <td>33-36</td>
-                                <td>40.5-43.5</td>
-                            </tr>
-                            <tr>
-                                <th>XL</th>
-                                <td>42-45</td>
-                                <td>36-40</td>
-                                <td>43.5-47.5</td>
-                            </tr>
-                            <tr>
-                                <th>XXL</th>
-                                <td>45-48</td>
-                                <td>40-44</td>
-                                <td>47.5-51.5</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </figure>
             </div>
             <div class="tab-pane " id="product-tab-reviews">
                 <div class="row">
